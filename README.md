@@ -1,5 +1,4 @@
-# Master Thesis (QuantFinance-UoW)
-CPL measure under simulation method
+# CPL measure under merton asset value method
 
 ## Counterparty protofilo loss(CPL)
 
