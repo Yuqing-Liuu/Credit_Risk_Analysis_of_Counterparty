@@ -15,4 +15,4 @@ To support the analysis, the thesis includes simulation-based comparisons using 
 * Recovery Rate
 
 ### Technology
-Python + C plus plus
+Python(Data Preparation + Visualization) + C plus plus（simulation for Exposure/CVA/PFE)
