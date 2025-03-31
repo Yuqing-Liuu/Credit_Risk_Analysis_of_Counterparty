@@ -15,4 +15,4 @@ To support the analysis, the thesis includes simulation-based comparisons using 
 * Recovery Rate
 
 ### Technology
-Python
+Python + C plus plus
