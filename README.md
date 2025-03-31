@@ -7,8 +7,16 @@ After establishing the conceptual foundations, the thesis explores the regulator
 
 To support the analysis, the thesis includes simulation-based comparisons using portfolios of interest rate swaps with varying maturities and counterparties of differing credit quality. The results highlight the central importance of CVA in managing counterparty credit risk and demonstrate the strengths of IMM, particularly its ability to better reflect market reality compared to CEM.
 
-### Product
-interest rate sawps
+### Data (interest rate sawps)
+* Swap Portfolio – e.g., 10–20 interest rate swap contracts with:
+
+* Yield Curve – e.g., a simple bootstrapped curve from deposit/swap rates
+
+* Forward Curve – derived from yield curve (or flat forward rates for simplicity)
+
+* Credit Spread Curve – for counterparties with different ratings (A, BBB, etc.)
+
+* Recovery Rate
 
 ### Technology
 Python
