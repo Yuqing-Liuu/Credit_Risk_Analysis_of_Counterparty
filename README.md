@@ -80,7 +80,13 @@
 - 6.5 Recommendations for Future Research  
 
 ---
+References 
 
+Basel Committee on Banking Supervision (BCBS). (2011). Basel III: A global regulatory framework for more resilient banks and banking systems. Bank for International Settlements.
 
+Basel Committee on Banking Supervision (BCBS). (2015). Review of the Credit Valuation Adjustment Risk Framework. Bank for International Settlements.
 
+Gregory, J. (2015). The xVA Challenge: Counterparty Credit Risk, Funding, Collateral and Capital. Wiley.
+
+---
 
