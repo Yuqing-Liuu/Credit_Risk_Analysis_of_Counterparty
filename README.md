@@ -24,6 +24,7 @@
     The thesis is limited to the modeling of CVA and does not extend to other valuation adjustments such as Debit Valuation Adjustment (DVA), Funding Valuation Adjustment (FVA), or Capital Valuation Adjustment (KVA). Similarly, the research does not include empirical model validation or backtesting with real market data. Instead, the emphasis is on conceptual clarity, computational implementation, and comparative analysis of different exposure measurement frameworks.
 
     Within these boundaries, the study contributes to a deeper understanding of how simulation-based approaches can enhance the measurement of counterparty exposure and provide insight into the regulatory and practical implications of credit risk management.
+    
 ---
 
 ## 2. Literature Review and Theoretical Background
