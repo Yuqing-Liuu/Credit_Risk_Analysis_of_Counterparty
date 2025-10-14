@@ -40,7 +40,10 @@ CCR arises mainly from over-the-counter (OTC) derivatives and securities financi
 
 The Credit Valuation Adjustment (CVA) quantifies the market value of counterparty credit risk by adjusting the fair value of a derivative portfolio for the possibility of counterparty default prior to maturity. It is formally expressed as:
 
-$$CVA = (1 − R) ∫<sub>t = 0</sub><sup>T</sup> DF(t) × EE(t) × dPD(t)$$
+$$
+CVA = (1 - R) \int_0^T DF(t) \times EE(t) \times dPD(t)
+$$
+
 
 where R is the recovery rate, DF(t) the discount factor, EE(t) the expected exposure at time t, and dPD(t) the marginal default probability.
 
