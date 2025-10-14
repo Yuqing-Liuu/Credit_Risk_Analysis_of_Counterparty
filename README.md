@@ -80,7 +80,7 @@
 - 6.5 Recommendations for Future Research  
 
 ---
-References 
+## References 
 
 Basel Committee on Banking Supervision (BCBS). (2011). Basel III: A global regulatory framework for more resilient banks and banking systems. Bank for International Settlements.
 
