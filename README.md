@@ -92,7 +92,15 @@ Basel Committee on Banking Supervision (BCBS). (2011). Basel III: A global regul
 
 Basel Committee on Banking Supervision (BCBS). (2015). Review of the Credit Valuation Adjustment Risk Framework. Bank for International Settlements.
 
+Basel Committee on Banking Supervision (BCBS). (2017). The Standardised Approach for Measuring Counterparty Credit Risk Exposures (SA-CCR). BIS Publications.
+
+Brigo, D., & Morini, M. (2010). Counterparty Credit Risk, Collateral and Funding: With Pricing Cases for All Asset Classes. Wiley.
+
 Gregory, J. (2015). The xVA Challenge: Counterparty Credit Risk, Funding, Collateral and Capital. Wiley.
+
+International Swaps and Derivatives Association (ISDA). (2019). ISDA Master Agreement and Credit Support Annex. ISDA Publications.
+
+Mathur, S., & Skoglund, J. (2013). Counterparty Exposure Management in the Basel III Era. SSRN.
 
 ---
 
