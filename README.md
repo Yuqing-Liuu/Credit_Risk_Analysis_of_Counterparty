@@ -40,17 +40,17 @@ In the aftermath of the 2008 crisis, regulators recognized that CCR could genera
 
 ### 2.2 The Concept and Role of Credit Valuation Adjustment
 
-CVA represents the **market value of counterparty credit risk** embedded in a portfolio of derivatives. It is defined as the difference between the risk-free value of the portfolio and its true value after accounting for counterparty default risk (Gregory, 2015). In practice, CVA quantifies the expected loss due to counterparty default before contract maturity:
+CVA represents the market value of counterparty credit risk embedded in a portfolio of derivatives. It is defined as the difference between the risk-free value of the portfolio and its true value after accounting for counterparty default risk (Gregory, 2015). In practice, CVA quantifies the expected loss due to counterparty default before contract maturity:
 
-\[
+$$
 CVA = (1 - R) \int_0^T DF(t) \times EE(t) \times dPD(t)
-\]
+$$
 
 where \(R\) denotes the recovery rate, \(DF(t)\) is the discount factor, \(EE(t)\) is the expected exposure at time \(t\), and \(dPD(t)\) is the marginal default probability.  
 
-CVA therefore depends on both the **credit quality** of the counterparty and the **exposure profile** determined by market movements. It integrates market and credit risk dimensions, forming a critical component of both risk management and regulatory capital requirements (BCBS, 2015).  
+CVA therefore depends on both the credit quality of the counterparty and the exposure profile determined by market movements. It integrates market and credit risk dimensions, forming a critical component of both risk management and regulatory capital requirements (BCBS, 2015).  
 
-The inclusion of CVA in **Basel III** introduced a new **CVA capital charge**, requiring banks to hold additional capital to cover potential mark-to-market losses caused by credit spread volatility. This change reflected a fundamental shift in regulatory philosophy, emphasizing the need to capture **pre-default credit risk** as well as default-related losses.
+The inclusion of CVA in Basel III introduced a new **CVA capital charge**, requiring banks to hold additional capital to cover potential mark-to-market losses caused by credit spread volatility. This change reflected a fundamental shift in regulatory philosophy, emphasizing the need to capture **pre-default credit risk** as well as default-related losses.
 
 ---
 
