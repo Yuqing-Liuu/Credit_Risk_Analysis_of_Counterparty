@@ -28,66 +28,59 @@
 ---
 
 ## 2. Literature Review and Theoretical Background
-### 2.1 Overview of Counterparty Credit Risk
+2.1 Overview of Counterparty Credit Risk
 
-The global financial crisis of 2008 revealed significant weaknesses in how financial institutions assessed and managed counterparty credit risk (CCR). CCR refers to the risk that a counterparty to a financial contract may default before the final settlement of cash flows. Unlike traditional credit risk, CCR is **bilateral**: both parties may owe money to each other at different points in time. The exposure is therefore uncertain and depends on the **future evolution of market variables**, such as interest rates, credit spreads, or foreign exchange rates (Gregory, 2015).  
+Following the 2008 financial crisis, extensive academic and regulatory research has focused on the quantification and mitigation of counterparty credit risk (CCR). CCR is defined as the potential loss a financial institution may suffer if a counterparty defaults before the final settlement of contractual obligations. The distinctive feature of CCR is that exposure is stochastic, changing with underlying market variables such as interest rates, foreign exchange rates, and credit spreads (Gregory, 2015).
 
-CCR primarily arises in **over-the-counter (OTC)** derivatives and securities financing transactions. The potential loss depends on three key parameters: the **probability of default (PD)**, the **loss given default (LGD)**, and the **exposure at default (EAD)** (BCBS, 2011). While PD and LGD measure credit quality, EAD represents a dynamic, forward-looking exposure that often requires simulation-based estimation.  
+CCR arises mainly from over-the-counter (OTC) derivatives and securities financing transactions. The exposure at default (EAD) depends on the future market value of outstanding positions, while the probability of default (PD) and loss given default (LGD) represent the credit risk parameters (BCBS, 2011). Estimating EAD over time requires a dynamic modeling framework, which motivates the use of simulation-based approaches such as Monte Carlo analysis.
 
-In the aftermath of the 2008 crisis, regulators recognized that CCR could generate severe contagion effects across the financial system. Mark-to-market losses caused by counterparty credit spread deterioration frequently exceeded direct default losses (Brigo & Morini, 2010). Consequently, the Basel framework was expanded to include the **Credit Valuation Adjustment (CVA)**, which captures these market-driven components of credit risk.
 
----
 
-### 2.2 The Concept and Role of Credit Valuation Adjustment
+2.2 Credit Valuation Adjustment in the Literature
 
-CVA represents the market value of counterparty credit risk embedded in a portfolio of derivatives. It is defined as the difference between the risk-free value of the portfolio and its true value after accounting for counterparty default risk (Gregory, 2015). In practice, CVA quantifies the expected loss due to counterparty default before contract maturity:
+The Credit Valuation Adjustment (CVA) quantifies the market value of counterparty credit risk by adjusting the fair value of a derivative portfolio for the possibility of counterparty default prior to maturity. It is formally expressed as:
 
-$$
-CVA = (1 - R) \int_0^T DF(t) \times EE(t) \times dPD(t)
-$$
+<p>CVA = (1 − R) ∫<sub>0</sub><sup>T</sup> DF(t) × EE(t) × dPD(t)</p>
 
-where \(R\) denotes the recovery rate, \(DF(t)\) is the discount factor, \(EE(t)\) is the expected exposure at time \(t\), and \(dPD(t)\) is the marginal default probability.  
+where R is the recovery rate, DF(t) the discount factor, EE(t) the expected exposure at time t, and dPD(t) the marginal default probability.
 
-CVA therefore depends on both the credit quality of the counterparty and the exposure profile determined by market movements. It integrates market and credit risk dimensions, forming a critical component of both risk management and regulatory capital requirements (BCBS, 2015).  
+This representation, introduced in studies such as Brigo and Morini (2010) and Gregory (2015), has become a standard formulation in both academic and regulatory frameworks. Early work treated exposure as deterministic, while later research introduced stochastic credit spread models, wrong-way risk, and collateral adjustments (Brigo and Vrins, 2016).
 
-The inclusion of CVA in Basel III introduced a new **CVA capital charge**, requiring banks to hold additional capital to cover potential mark-to-market losses caused by credit spread volatility. This change reflected a fundamental shift in regulatory philosophy, emphasizing the need to capture **pre-default credit risk** as well as default-related losses.
+Recent contributions expand the concept to a broader class of valuation adjustments collectively referred to as xVA, including DVA, FVA, and KVA, each addressing different components of counterparty and funding risk (Green and Kenyon, 2015). Within this literature, CVA remains the adjustment most directly linked to regulatory capital requirements.
 
----
 
-### 2.3 The Evolution of the Basel Framework
 
-Under **Basel II**, counterparty credit risk was treated primarily through the **Current Exposure Method (CEM)**, which estimated potential exposure using fixed add-on factors based on product type and maturity. Although simple, CEM ignored diversification, netting, and collateral effects, often producing conservative and inconsistent results (BCBS, 2011).  
+2.3 Evolution of Regulatory Approaches
 
-To improve risk sensitivity, the **Internal Model Method (IMM)** was introduced, allowing qualified institutions to model exposure dynamically using **Monte Carlo simulation**. This approach reflects the stochastic behavior of exposures over time but is computationally intensive and subject to strict regulatory approval.  
+The regulatory treatment of counterparty exposure has evolved in parallel with academic advances. Under Basel II, exposure was measured through the Current Exposure Method (CEM), which applied fixed add-on factors by product type and maturity. Although straightforward, CEM ignored diversification, netting, and collateralization effects, often leading to conservative exposure estimates (BCBS, 2011).
 
-In **Basel III**, the **Standardized Approach for Counterparty Credit Risk (SA-CCR)** replaced CEM. SA-CCR maintains computational simplicity while improving consistency with economic risk drivers. It explicitly accounts for **netting sets**, **collateralization**, and product-specific risk weights (BCBS, 2017).  
+Basel III introduced the Credit Valuation Adjustment (CVA) capital charge, recognizing credit spread risk as a separate source of loss. It also allowed banks to adopt the Internal Model Method (IMM), which estimates exposure through Monte Carlo simulation, provided they meet certain modeling and validation requirements (BCBS, 2015). 
 
-The ongoing reforms under **Basel IV** further align exposure measurement with CVA capital frameworks, ensuring consistency across credit and market risk components. These developments represent a clear evolution from deterministic, static methods toward **probabilistic, model-based frameworks** that better capture the dynamic nature of counterparty risk.
+In Basel III and subsequent Basel IV reforms, the Standardized Approach for Counterparty Credit Risk (SA-CCR) replaced CEM. SA-CCR aims to balance simplicity with greater risk sensitivity, explicitly incorporating netting sets, collateral recognition, and supervisory delta factors (BCBS, 2017). Studies such as Mathur and Skoglund (2013) demonstrate that IMM provides smoother and more realistic exposure profiles than standardized methods, though at higher operational and computational costs.
 
----
 
-### 2.4 Netting and Collateralization under ISDA Agreements
 
-The mitigation of counterparty credit risk depends strongly on legal and operational mechanisms such as **netting** and **collateralization**. The **ISDA Master Agreement** provides the legal foundation for close-out netting, which allows counterparties to offset their mutual obligations, thereby reducing overall exposure to a single **net amount** (ISDA, 2019).  
+2.4 Netting and Collateralization under ISDA Agreements
 
-Collateralization, formalized through the **Credit Support Annex (CSA)**, further reduces risk by requiring parties to post collateral based on current exposures. The collateral amount is recalculated regularly through margin calls, ensuring exposures remain within defined thresholds (Brigo & Morini, 2010).  
+The mitigation of counterparty exposure relies heavily on legal and operational mechanisms defined by the International Swaps and Derivatives Association (ISDA). The ISDA Master Agreement establishes the framework for close-out netting, allowing counterparties to offset mutual obligations across transactions and thereby reduce the total exposure to a single net amount (ISDA, 2019).
 
-Netting and collateralization have profound effects on exposure modeling. Netting reduces portfolio-level exposure variance, while collateralization limits the potential tail losses by capping unsecured exposure. In Monte Carlo-based frameworks, these mechanisms are integrated by adjusting simulated exposure paths for **netting sets** and **collateral thresholds**, yielding a more realistic distribution of potential future exposures (Pykhtin & Zhu, 2007).
+Collateralization, defined through the Credit Support Annex (CSA), further mitigates credit risk by requiring counterparties to post collateral whenever exposure exceeds predefined thresholds. Collateral amounts are recalculated frequently through margin calls, ensuring exposures remain within contractual limits (Brigo and Morini, 2010).
 
----
+From a modeling standpoint, netting compresses exposure distributions, while collateralization truncates the upper tail of potential loss outcomes (Pykhtin and Zhu, 2007). Simulation frameworks account for these effects by adjusting exposure paths for netting sets and collateral thresholds, resulting in a more realistic estimation of potential future exposures and CVA.
 
-### 2.5 Monte Carlo Simulation in Exposure Estimation
 
-Monte Carlo simulation is the **standard approach** for exposure modeling under the Internal Model Method (IMM). It enables the generation of multiple stochastic scenarios for key market risk factors such as interest rates, credit spreads, and foreign exchange rates (Glasserman, 2003). For each simulated path, the mark-to-market value of the derivative portfolio is computed at discrete time intervals, creating a distribution of exposures.  
 
-From this distribution, several important risk metrics are derived:  
-- **Expected Exposure (EE)** – the average positive exposure at a given time horizon.  
-- **Expected Positive Exposure (EPE)** – the time-weighted average of expected exposures.  
-- **Potential Future Exposure (PFE)** – a quantile measure indicating exposure at a specific confidence level.  
+2.5 Simulation-Based Exposure Modeling
 
-These measures provide a comprehensive understanding of exposure dynamics over time. Moreover, Monte Carlo simulation allows the inclusion of **wrong-way risk**, where the counterparty’s creditworthiness deteriorates as exposure increases—a feature often ignored in standardized approaches (Brigo & Vrins, 2016).  
+Monte Carlo simulation has become the predominant approach for modeling counterparty exposure under the Internal Model Method (IMM). It enables the joint simulation of market and credit risk factors and the calculation of portfolio values across thousands of future scenarios (Glasserman, 2003). 
 
-Although computationally demanding, the Monte Carlo approach remains the most flexible and accurate method for estimating counterparty exposure and CVA. Its ability to incorporate complex dependencies and contractual features makes it central to both regulatory modeling and practical risk management.
+From the resulting exposure distribution, several risk measures can be derived:
+
+- Expected Exposure (EE): the mean of positive exposures at a specific time point.
+- Expected Positive Exposure (EPE): the time-weighted average of expected exposures.
+- Potential Future Exposure (PFE): a percentile of the exposure distribution that reflects a high-confidence limit on exposure.
+
+Monte Carlo simulation can also incorporate wrong-way risk, where exposure and counterparty credit quality are correlated—an aspect ignored by standardized methods (Brigo and Vrins, 2016). Despite its computational intensity, the Monte Carlo approach remains the most flexible and accurate method for estimating exposure and CVA, as it captures nonlinearities and contractual effects such as netting and collateralization.
 
 
 ---
