@@ -281,5 +281,19 @@ International Swaps and Derivatives Association (ISDA). (2019). ISDA Master Agre
 
 Mathur, S., & Skoglund, J. (2013). Counterparty Exposure Management in the Basel III Era. SSRN.
 
+Basel Committee on Banking Supervision (BCBS). (2005). Basel II: International Convergence of Capital Measurement and Capital Standards. Bank for International Settlements.  
+
+Basel Committee on Banking Supervision (BCBS). (2011). Basel III: A global regulatory framework for more resilient banks and banking systems. Bank for International Settlements.  
+
+Basel Committee on Banking Supervision (BCBS). (2015). Review of the Credit Valuation Adjustment Risk Framework. Bank for International Settlements.  
+
+Basel Committee on Banking Supervision (BCBS). (2017). The Standardised Approach for Measuring Counterparty Credit Risk Exposures (SA-CCR). BIS Publications.  
+
+Basel Committee on Banking Supervision (BCBS). (2020). Basel III: Finalising post-crisis reforms. Bank for International Settlements.  
+
+Brigo, D., and Morini, M. (2010). Counterparty Credit Risk, Collateral and Funding: With Pricing Cases for All Asset Classes. Wiley.  
+
+Gregory, J. (2015). The xVA Challenge: Counterparty Credit Risk, Funding, Collateral and Capital. Wiley.  
+
 ---
 
