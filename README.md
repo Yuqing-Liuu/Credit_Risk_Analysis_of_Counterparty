@@ -200,7 +200,7 @@ with \( \beta \) typically set at 1.4 as a regulatory multiplier.
 
 IMM allows the incorporation of netting, collateral, and wrong-way risk effects, providing a risk-sensitive and realistic exposure estimate. However, it demands significant data, validation, and computational resources, limiting its use to advanced institutions with strong quantitative infrastructure.
 
----
+
 
 ### 3.4 Regulatory Evolution under Basel IV
 
@@ -228,18 +228,238 @@ Moreover, the computational burden of simulation-based methods such as IMM is si
 
 This chapter reviewed the evolution of counterparty credit risk regulation from Basel II to Basel IV. Basel II introduced the concept of counterparty exposure but lacked sensitivity to credit spread volatility. Basel III addressed this gap by introducing the CVA capital charge and refining exposure measurement through the IMM and SA-CCR frameworks. Basel IV further enhanced consistency and transparency through the SA-CVA approach.  
 
----
+
 
 ## 4. Methodology
-- 4.1 Modeling Counterparty Credit Exposure  
-- 4.2 Monte Carlo Simulation Framework  
-- 4.3 Stochastic Models for Market Risk Factors  
-  - 4.3.1 Interest Rate Models  
-  - 4.3.2 Credit Spread Models  
-- 4.4 Exposure Metrics: EE, EPE, and PFE  
-- 4.5 Integration of Netting and Collateral Adjustments  
-- 4.6 Calculation of Credit Valuation Adjustment (CVA)  
-- 4.7 Implementation Design and Simulation Parameters  
+
+## 4.1 Modeling Counterparty Credit Exposure
+
+The purpose of this chapter is to develop a quantitative framework for estimating counterparty credit exposure through a Monte Carlo simulation approach. The model aims to produce time-dependent exposure profiles that capture the stochastic nature of underlying market risk factors, as well as the effects of netting and collateral agreements defined under ISDA documentation.  
+
+The methodology follows the principles of the Internal Model Method (IMM) recognized under Basel III, where expected exposure (EE), expected positive exposure (EPE), and potential future exposure (PFE) are obtained from simulated market scenarios. The results of this modeling framework serve as the foundation for calculating the Credit Valuation Adjustment (CVA).
+
+In line with standard practice, the simulation operates under a risk-neutral measure \( Q \), ensuring consistency with market pricing conventions. The primary stochastic drivers are the short-term interest rate and, optionally, credit spread dynamics, both modeled as diffusion processes.
+
+
+
+## 4.2 Stochastic Model Specification
+
+4.2.1 Interest Rate Process
+
+Interest rate risk is modeled using a one-factor short-rate model. Among several alternatives, such as Vasicek (1977), Cox–Ingersoll–Ross (1985), and Hull–White (1990), the **Hull–White model** is chosen due to its analytical tractability and calibration flexibility. The short rate \( r_t \) evolves according to the stochastic differential equation:
+
+$$
+dr_t = a(b - r_t)dt + \sigma_r dW_t^r
+$$
+
+where:
+- \( a \) is the mean-reversion speed,
+- \( b \) is the long-term mean level,
+- \( \sigma_r \) is the volatility of the short rate,
+- \( W_t^r \) is a standard Brownian motion under measure \( Q \).
+
+The corresponding zero-coupon bond price is expressed as:
+
+$$
+P(t, T) = A(t, T) \exp[-B(t, T) r_t]
+$$
+
+where \( A(t, T) \) and \( B(t, T) \) are deterministic functions derived from the model parameters.
+
+4.2.2 Credit Spread Process
+
+To capture the counterparty’s credit quality evolution, the credit spread \( s_t \) is modeled as a mean-reverting Ornstein–Uhlenbeck process:
+
+$$
+ds_t = \kappa(\theta - s_t)dt + \sigma_s dW_t^s
+$$
+
+where \( \kappa \) represents the mean-reversion speed, \( \theta \) the long-term mean, and \( \sigma_s \) the spread volatility. Correlation between market and credit risk is incorporated via:
+
+$$
+dW_t^r dW_t^s = \rho \, dt
+$$
+
+where \( \rho \) denotes the instantaneous correlation coefficient between market and credit factors. A positive value of \( \rho \) corresponds to *wrong-way risk*, meaning exposure tends to increase when credit quality deteriorates.
+
+---
+
+## 4.3 Monte Carlo Simulation Framework
+
+The Monte Carlo framework generates a large number \( N \) of simulated paths for the risk factors \( (r_t, s_t) \) over a time grid \( t_0, t_1, \ldots, t_T \). For each simulated path, the mark-to-market value of the derivative portfolio is computed at each time step.  
+
+Let \( V_t^{(n)} \) denote the simulated value of the portfolio at time \( t \) for scenario \( n \). The exposure is defined as the positive part of this value:
+
+$$
+E_t^{(n)} = \max(V_t^{(n)}, 0)
+$$
+
+The expected exposure at time \( t \) is then estimated as the Monte Carlo average:
+
+$$
+EE(t) = \frac{1}{N} \sum_{n=1}^N E_t^{(n)}
+$$
+
+The **Expected Positive Exposure (EPE)** over the time horizon \( [0, T] \) is defined as the time-weighted average of expected exposures:
+
+$$
+EPE = \frac{1}{T} \int_0^T EE(t) \, dt
+$$
+
+In discrete form, this becomes:
+
+$$
+EPE = \frac{1}{K} \sum_{k=1}^K EE(t_k)
+$$
+
+where \( K \) is the total number of simulated time points.
+
+The **Potential Future Exposure (PFE)**, representing a high quantile of the exposure distribution, is given by:
+
+$$
+PFE_q(t) = \text{Quantile}_q(E_t^{(1)}, E_t^{(2)}, \ldots, E_t^{(N)})
+$$
+
+where \( q \) typically corresponds to the 95th or 99th percentile.
+
+
+
+## 4.4 Portfolio Valuation under Simulation
+
+For demonstration purposes, the portfolio considered in this study consists of a set of interest rate swaps (IRS). The mark-to-market value of each swap under the simulated interest rate paths is determined using the present value of future cash flows:
+
+$$
+V_t = \sum_{i=t}^{T} [N \times (R_{fix} - R_{float}(t_i)) \times DF(t, t_i)]
+$$
+
+where:
+- \( N \) is the notional amount,
+- \( R_{fix} \) is the fixed rate agreed in the contract,
+- \( R_{float}(t_i) \) is the floating rate at time \( t_i \),
+- \( DF(t, t_i) \) is the discount factor derived from the simulated short-rate path.
+
+In practice, the floating rate is approximated by the simulated forward rate from the short-rate model, ensuring consistency between valuation and exposure estimation.
+
+
+
+## 4.5 Incorporating Netting and Collateral Adjustments
+
+4.5.1 Netting
+
+Under ISDA agreements, multiple derivatives with the same counterparty can be combined into a single netting set. The netted exposure is obtained by summing individual contract values within the same set:
+
+$$
+V_t^{net} = \sum_{i=1}^{N_{trades}} V_t^{(i)}
+$$
+
+The corresponding exposure is:
+
+$$
+E_t^{net} = \max(V_t^{net}, 0)
+$$
+
+Netting typically reduces both the average and the variance of exposure, as positive and negative values partially offset each other.
+
+4.5.2 Collateralization
+
+Collateral arrangements defined in the Credit Support Annex (CSA) require counterparties to post collateral whenever the net exposure exceeds a specified threshold. The collateral-adjusted exposure is computed as:
+
+$$
+E_t^{coll} = \max(V_t^{net} - C_t, 0)
+$$
+
+where \( C_t \) represents the collateral posted at time \( t \). Collateral is updated periodically according to margin call frequency and may be subject to minimum transfer amounts (MTA).  
+
+The collateral amount can be expressed as:
+
+$$
+C_t =
+\begin{cases}
+0, & \text{if } |V_t^{net}| \leq \text{Threshold + MTA} \\
+V_t^{net} - \text{Threshold}, & \text{otherwise}
+\end{cases}
+$$
+
+These adjustments directly influence exposure profiles, reducing tail risk and, consequently, the calculated CVA.
+
+
+
+## 4.6 Credit Valuation Adjustment Computation
+
+Once the exposure paths are obtained, the Credit Valuation Adjustment (CVA) is computed as the discounted expected loss due to counterparty default before contract maturity. The continuous-time expression is given by:
+
+$$
+CVA = (1 - R) \int_0^T DF(t) \times EE(t) \times dPD(t)
+$$
+
+where:
+- \( R \) is the recovery rate,
+- \( DF(t) \) is the discount factor,
+- \( EE(t) \) is the expected exposure,
+- \( dPD(t) \) is the incremental default probability over time.
+
+In discrete time, this becomes:
+
+$$
+CVA = (1 - R) \sum_{k=1}^{K} DF(t_k) \times EE(t_k) \times \Delta PD(t_k)
+$$
+
+The default probability increment can be derived from the counterparty’s credit spread \( s_t \) using an exponential survival model:
+
+$$
+PD(t) = 1 - \exp\left(-\int_0^t h(u) \, du\right)
+$$
+
+where \( h(t) \) is the hazard rate, approximated as \( h(t) \approx \frac{s_t}{1 - R} \).
+
+
+
+## 4.7 Implementation Design and Simulation Parameters
+
+The simulation is implemented using Python, with numerical libraries such as NumPy and Pandas for matrix operations, and random number generation via the Mersenne Twister algorithm. The following parameters define the base scenario:
+
+| Parameter | Symbol | Value | Description |
+|------------|---------|--------|-------------|
+| Mean reversion speed | \( a \) | 0.05 | Interest rate process |
+| Long-term mean rate | \( b \) | 0.03 | Annualized |
+| Short-rate volatility | \( \sigma_r \) | 0.01 | Annualized |
+| Credit spread volatility | \( \sigma_s \) | 0.015 | Annualized |
+| Correlation | \( \rho \) | 0.25 | Between market and credit risk |
+| Recovery rate | \( R \) | 0.40 | Assumed constant |
+| Number of scenarios | \( N \) | 10,000 | Monte Carlo paths |
+| Time steps | \( K \) | 50 | Quarterly intervals |
+| Simulation horizon | \( T \) | 12.5 years | Typical IRS maturity |
+
+The model is run under three different configurations to isolate the effects of netting and collateralization:
+1. **Unnetted, uncollateralized** exposure (base case).
+2. **Netted portfolio** exposure under ISDA netting sets.
+3. **Collateralized exposure** under full CSA agreement.
+
+The results for each configuration are used to analyze how contractual risk mitigants influence exposure dynamics and the resulting CVA.
+
+
+
+## 4.8 Model Validation and Limitations
+
+Model validation focuses on ensuring the internal consistency and numerical stability of the simulation results. Key checks include:
+- Convergence of EPE and PFE with respect to the number of simulated paths.
+- Sensitivity of results to correlation and volatility parameters.
+- Comparison of simulated exposure distributions against analytical benchmarks for simple portfolios.
+
+However, certain limitations remain. The model assumes normally distributed market and credit factors, which may underestimate tail events. Correlation is treated as constant, ignoring potential state dependence. Moreover, the recovery rate is deterministic, while in practice it may vary with market conditions.  
+
+Despite these simplifications, the simulation framework provides a robust foundation for assessing the impact of netting, collateralization, and stochastic exposure dynamics on counterparty credit risk.
+
+
+
+## 4.9 Summary
+
+This chapter developed a Monte Carlo simulation framework for estimating counterparty credit exposure under netting and collateral arrangements. The model integrates stochastic interest rate and credit spread processes, enabling the computation of exposure metrics such as EE, EPE, and PFE. The simulated exposure paths serve as inputs for CVA calculation in both continuous and discrete forms.
+
+By capturing key market and credit risk dependencies, the methodology aligns with the Internal Model Method (IMM) recognized in regulatory practice. The next chapter applies this framework to a simulated derivative portfolio and analyzes the results under different risk mitigation scenarios.
+
+
+
 
 ---
 
@@ -280,20 +500,6 @@ Gregory, J. (2015). The xVA Challenge: Counterparty Credit Risk, Funding, Collat
 International Swaps and Derivatives Association (ISDA). (2019). ISDA Master Agreement and Credit Support Annex. ISDA Publications.
 
 Mathur, S., & Skoglund, J. (2013). Counterparty Exposure Management in the Basel III Era. SSRN.
-
-Basel Committee on Banking Supervision (BCBS). (2005). Basel II: International Convergence of Capital Measurement and Capital Standards. Bank for International Settlements.  
-
-Basel Committee on Banking Supervision (BCBS). (2011). Basel III: A global regulatory framework for more resilient banks and banking systems. Bank for International Settlements.  
-
-Basel Committee on Banking Supervision (BCBS). (2015). Review of the Credit Valuation Adjustment Risk Framework. Bank for International Settlements.  
-
-Basel Committee on Banking Supervision (BCBS). (2017). The Standardised Approach for Measuring Counterparty Credit Risk Exposures (SA-CCR). BIS Publications.  
-
-Basel Committee on Banking Supervision (BCBS). (2020). Basel III: Finalising post-crisis reforms. Bank for International Settlements.  
-
-Brigo, D., and Morini, M. (2010). Counterparty Credit Risk, Collateral and Funding: With Pricing Cases for All Asset Classes. Wiley.  
-
-Gregory, J. (2015). The xVA Challenge: Counterparty Credit Risk, Funding, Collateral and Capital. Wiley.  
-
+ 
 ---
 
