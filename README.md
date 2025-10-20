@@ -89,7 +89,8 @@ Monte Carlo simulation can also incorporate wrong-way risk, where exposure and c
 ---
 
 ## 3. Regulatory Framework for CVA Capital Charge
-## 3.1 Basel II: Early Treatment of Counterparty Credit Risk
+
+3.1 Basel II: Early Treatment of Counterparty Credit Risk
 
 The Basel II framework, introduced in 2004, marked the first formal recognition of counterparty credit risk (CCR) within the capital adequacy structure. Under Basel II, exposure to derivatives and securities financing transactions was measured through the Current Exposure Method (CEM) or the Internal Model Method (IMM), depending on a bank’s level of sophistication (BCBS, 2005).
 
@@ -103,9 +104,9 @@ where \( V \) represents the current mark-to-market value of the derivative port
 
 Although CEM was easy to implement, it failed to account for important risk mitigants such as netting and collateralization. Moreover, it was insensitive to the volatility of credit spreads and the time-varying nature of exposure profiles. Consequently, Basel II captured default risk but not the mark-to-market risk arising from changes in counterparty credit quality.
 
----
 
-## 3.2 Basel III: Introduction of CVA Capital Charge
+
+3.2 Basel III: Introduction of CVA Capital Charge
 
 In response to the 2008 financial crisis, the Basel Committee on Banking Supervision (BCBS) introduced Basel III, which incorporated the Credit Valuation Adjustment (CVA) as a separate source of capital requirement. The rationale was that institutions experienced significant losses due to CVA volatility rather than direct counterparty defaults (BCBS, 2011).
 
@@ -124,11 +125,11 @@ where:
 
 The capital charge under Basel III thus linked exposure profiles, credit spreads, and correlations between counterparties. This approach significantly improved sensitivity to market risk but also increased capital requirements, particularly for institutions with large derivative portfolios.
 
----
 
-## 3.3 Comparison of Regulatory Approaches
 
-### 3.3.1 Current Exposure Method (CEM)
+### 3.3 Comparison of Regulatory Approaches
+
+3.3.1 Current Exposure Method (CEM)
 
 The CEM was the default method under Basel II and continued to be used in early Basel III implementations. The EAD under CEM is calculated as:
 
@@ -145,9 +146,9 @@ While simple, the CEM has notable limitations:
 
 As a result, it is considered overly conservative and disconnected from actual portfolio risk.
 
----
 
-### 3.3.2 Standardized Approach (SA-CCR)
+
+ 3.3.2 Standardized Approach (SA-CCR)
 
 To overcome CEM’s weaknesses, the Standardized Approach for Counterparty Credit Risk (SA-CCR) was introduced in 2017 as part of Basel III’s finalization (BCBS, 2017). SA-CCR maintains a standardized framework but improves risk sensitivity by incorporating netting sets, collateralization, and supervisory delta adjustments.
 
@@ -172,9 +173,9 @@ where \( V \) is the net mark-to-market value of derivatives in the netting set,
 
 The PFE component is determined using supervisory add-on factors for different asset classes and maturities, adjusted for delta and notional exposure. Compared to CEM, SA-CCR provides better recognition of risk mitigants and alignment with the economic exposure profile of derivatives portfolios.
 
----
 
-### 3.3.3 Internal Model Method (IMM)
+
+3.3.3 Internal Model Method (IMM)
 
 The Internal Model Method (IMM) is the most sophisticated approach and allows banks to estimate exposures using their own risk models, subject to regulatory approval. IMM employs Monte Carlo simulation to compute the distribution of future exposures over time and derive expected positive exposure (EPE) and effective expected exposure (EEE):
 
@@ -201,7 +202,7 @@ IMM allows the incorporation of netting, collateral, and wrong-way risk effects,
 
 ---
 
-## 3.4 Regulatory Evolution under Basel IV
+### 3.4 Regulatory Evolution under Basel IV
 
 The Basel IV reforms, finalized in 2019, further refined counterparty risk measurement. They aimed to enhance comparability between institutions and reduce excessive reliance on internal models. The revised framework introduced the SA-CVA (Standardized Approach for CVA risk) as a replacement for the earlier standardized CVA formula.
 
@@ -213,17 +214,17 @@ $$
 
 where \( \Delta_i \) represents the delta sensitivity of the CVA with respect to the credit spread of counterparty \( i \), and \( \text{VEGA}_i \) denotes the corresponding vega sensitivity. This approach increases transparency and reduces model dependency while retaining risk sensitivity.
 
----
 
-## 3.5 Practical Challenges in Regulatory Implementation
+
+### 3.5 Practical Challenges in Regulatory Implementation
 
 Despite improvements, implementing CVA capital frameworks poses several practical challenges. First, data availability remains a critical issue, especially for historical credit spread and exposure data. Second, model risk arises from calibration errors and the potential mismatch between theoretical assumptions and market behavior.  
 
 Moreover, the computational burden of simulation-based methods such as IMM is significant, often requiring large-scale infrastructure and model validation processes. Finally, differences in regulatory adoption timelines across jurisdictions have created inconsistencies in capital requirements for global institutions (BCBS, 2020).
 
----
 
-## 3.6 Summary
+
+### 3.6 Summary
 
 This chapter reviewed the evolution of counterparty credit risk regulation from Basel II to Basel IV. Basel II introduced the concept of counterparty exposure but lacked sensitivity to credit spread volatility. Basel III addressed this gap by introducing the CVA capital charge and refining exposure measurement through the IMM and SA-CCR frameworks. Basel IV further enhanced consistency and transparency through the SA-CVA approach.  
 
