@@ -464,7 +464,6 @@ By capturing key market and credit risk dependencies, the methodology aligns wit
 ---
 
 ## 5. Simulation and Results
-# CHAPTER V. SIMULATION AND RESULTS
 
 ## 5.1 Simulation Design and Scenario Setup
 
