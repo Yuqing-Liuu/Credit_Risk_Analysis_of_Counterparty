@@ -22,7 +22,7 @@ Duffie, D. (2010). *How Big Banks Fail and What to Do about It.* Princeton Unive
 
 Duffie, D., & Singleton, K. J. (2012). *Credit Risk: Pricing, Measurement, and Management.* Princeton University Press.  
 
-European Banking Authority. (2016). *Report on Credit Valuation Adjustment (CVA) Risk.* EBA Publication EBA/Op/2016/07. https://www.eba.europa.eu  
+European Banking Authority. (2016). *Report on Credit Valuation Adjustment (CVA) Risk.* EBA Publication EBA/Op/2016/07. 
 
 European Banking Authority. (2021). *Monitoring of IRB and SA-CCR Implementation across EU Banks.* European Banking Authority.  
 
