@@ -4,7 +4,7 @@ Basel Committee on Banking Supervision. (2005). *International Convergence of Ca
 
 Basel Committee on Banking Supervision. (2011). *Basel III: A Global Regulatory Framework for More Resilient Banks and Banking Systems (Revised Version).* Bank for International Settlements. https://www.bis.org/publ/bcbs189.htm  
 
-Basel Committee on Banking Supervision. (2015). *Review of the Credit Valuation Adjustment (CVA) Risk Framework.* Bank for International Settlements. https://www.bis.org/publ/bcbs325.htm  
+Basel Committee on Banking Supervision. (2015). *Review of the Credit Valuation Adjustment (CVA) Risk Framework.* Bank for International Settlements. 
 
 Basel Committee on Banking Supervision & International Organization of Securities Commissions. (2015). *Margin Requirements for Non-centrally Cleared Derivatives.* Bank for International Settlements. https://www.bis.org/bcbs/publ/d317.htm  
 
