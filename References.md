@@ -1,18 +1,18 @@
 # References
 
-Basel Committee on Banking Supervision. (2005). *International Convergence of Capital Measurement and Capital Standards – A Revised Framework (Basel II).* Bank for International Settlements. https://www.bis.org/publ/bcbs118.htm  
+Basel Committee on Banking Supervision. (2005). *International Convergence of Capital Measurement and Capital Standards – A Revised Framework (Basel II).* Bank for International Settlements. 
 
-Basel Committee on Banking Supervision. (2011). *Basel III: A Global Regulatory Framework for More Resilient Banks and Banking Systems (Revised Version).* Bank for International Settlements. https://www.bis.org/publ/bcbs189.htm  
+Basel Committee on Banking Supervision. (2011). *Basel III: A Global Regulatory Framework for More Resilient Banks and Banking Systems (Revised Version).* Bank for International Settlements. 
 
 Basel Committee on Banking Supervision. (2015). *Review of the Credit Valuation Adjustment (CVA) Risk Framework.* Bank for International Settlements. 
 
-Basel Committee on Banking Supervision & International Organization of Securities Commissions. (2015). *Margin Requirements for Non-centrally Cleared Derivatives.* Bank for International Settlements. https://www.bis.org/bcbs/publ/d317.htm  
+Basel Committee on Banking Supervision. (2017). *The Standardised Approach for Measuring Counterparty Credit Risk Exposures (SA-CCR).* Bank for International Settlements. 
 
-Basel Committee on Banking Supervision. (2017). *The Standardised Approach for Measuring Counterparty Credit Risk Exposures (SA-CCR).* Bank for International Settlements. https://www.bis.org/bcbs/publ/d424.htm  
+Basel Committee on Banking Supervision. (2019). *Minimum Capital Requirements for Market Risk (FRTB).* Bank for International Settlements. 
 
-Basel Committee on Banking Supervision. (2019). *Minimum Capital Requirements for Market Risk (FRTB).* Bank for International Settlements. https://www.bis.org/bcbs/publ/d457.htm  
+Basel Committee on Banking Supervision. (2020). *Credit Valuation Adjustment (CVA) Risk Framework – Final Standards (Basel IV).* Bank for International Settlements. https: 
 
-Basel Committee on Banking Supervision. (2020). *Basel IV: Credit Valuation Adjustment (CVA) Risk Framework – Final Standards.* Bank for International Settlements. https://www.bis.org/bcbs/publ/d485.htm  
+Basel Committee on Banking Supervision & International Organization of Securities Commissions. (2015). *Margin Requirements for Non-centrally Cleared Derivatives.* Bank for International Settlements.  
 
 Brigo, D., & Morini, M. (2010). *Counterparty Credit Risk, Collateral and Funding.* Wiley Finance.  
 
@@ -22,7 +22,7 @@ Duffie, D. (2010). *How Big Banks Fail and What to Do about It.* Princeton Unive
 
 Duffie, D., & Singleton, K. J. (2012). *Credit Risk: Pricing, Measurement, and Management.* Princeton University Press.  
 
-European Banking Authority. (2016). *Report on Credit Valuation Adjustment (CVA) Risk.* EBA Publication EBA/Op/2016/07. 
+European Banking Authority. (2016). *Report on Credit Valuation Adjustment (CVA) Risk.* EBA Publication EBA/Op/2016/07. https://www.eba.europa.eu  
 
 European Banking Authority. (2021). *Monitoring of IRB and SA-CCR Implementation across EU Banks.* European Banking Authority.  
 
@@ -45,6 +45,3 @@ Mathur, K., & Skoglund, J. (2013). Internal Model Methods for Counterparty Credi
 Pykhtin, M., & Zhu, S. (2007). A Guide to Modelling Counterparty Credit Risk. *GARP Risk Review, 7*(5), 16–22.  
 
 Stulz, R. M. (2009). Credit Default Swaps and the Credit Crisis. *Journal of Economic Perspectives, 24*(1), 73–92.  
-
-
-
