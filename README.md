@@ -4,20 +4,12 @@
 - **Abstract**
 - **Chapter 1 Introduction**
   - 1.1 Research Background and Significance  
-    - 1.1.1 Research Background  
-    - 1.1.2 Research Significance  
   - 1.2 Research Status at Home and Abroad  
-    - 1.2.1 Research Status   
   - 1.3 Research Methods and Ideas  
-    - 1.3.1 Research Methods   
 
 - **Chapter 2 Research on Relevant Technical Theories**
   - 2.1 Credit Risk Management Theory  
-    - 2.1.1 Asset Management Theory  
-    - 2.1.2 Liability Management Theory  
   - 2.2 KMV Model  
-    - 2.2.1 Theoretical Overview  
-    - 2.2.2 Research Method of KMV Model  
 
 - **Chapter 3 Measurement of Counterparty Credit Risk**
   - 3.1 Basic Overview  
