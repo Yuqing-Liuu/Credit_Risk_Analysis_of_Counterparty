@@ -4,19 +4,23 @@
 
 ### 2.1.1 Asset Management Theory
 
-The concept of asset management theory originates from the early stage of commercial banking development. Its core idea is that the primary function of a bank is to manage its assets to maximize profits while ensuring sufficient liquidity. In this framework, banks mainly focus on the structure and efficiency of their asset portfolios. By properly allocating funds among loans, securities, and reserves, banks seek to achieve a balance between liquidity, safety, and profitability.
+The theory of asset management emerged during the early development of modern commercial banking. Its fundamental assumption is that a bank’s core objective is to manage assets efficiently so as to maximise profit while maintaining adequate liquidity. Under this framework, financial institutions allocate funds among loans, securities and reserves in a way that balances liquidity, safety and profitability.
 
-However, with the increasing complexity of financial markets, the focus of asset management gradually shifted from simple portfolio optimization to a more comprehensive risk-based approach. Counterparty credit risk became an important component of this framework. The measurement and control of counterparty credit risk involve assessing the possibility of default by the transaction partner and quantifying potential losses in case of default (Duffie 2003; Basel Committee on Banking Supervision 2006).
+As financial markets evolved, banks increasingly faced complex risks associated with interest-rate fluctuations, exchange-rate volatility and counterparty defaults. The traditional concept of passive asset allocation thus shifted toward active portfolio management and risk-based capital regulation. Counterparty credit risk became an important component of this transformation, as it directly affects a bank’s exposure to derivative and financing transactions (Duffie 2003; Basel Committee on Banking Supervision 2006).
 
-Under asset management theory, the optimization of credit portfolios requires quantitative evaluation models. Among these models, the KMV model and the Value at Risk (VaR) methodology are often applied to assess credit-exposure volatility and the probability of default (Pykhtin and Zhu 2006). This evolution has provided a theoretical foundation for modern financial institutions to integrate market-risk and credit-risk management.
+The modern interpretation of asset management theory emphasises the integration of market-risk and credit-risk management. Quantitative methods such as the KMV model and the Value-at-Risk (VaR) approach are used to measure the volatility of asset portfolios and to estimate the probability of default (Pykhtin and Zhu 2006). These developments have provided a scientific foundation for banks to evaluate counterparty exposures and to maintain stability within the financial system.
+
+In addition to international contributions, Chinese scholars have elaborated on the adaptation of asset management theory within domestic financial institutions. Their work has stressed that banks should strengthen credit evaluation mechanisms, classify counterparties by risk level and dynamically adjust lending and derivative exposure according to market signals. Such approaches reflect the gradual convergence of Chinese banking practices with global risk-management standards.
 
 ### 2.1.2 Liability Management Theory
 
-Liability management theory emerged in the 1960s as financial markets developed and deposit volatility increased. The theory argues that banks can actively manage both sides of the balance sheet—assets and liabilities—to achieve liquidity control. Instead of passively relying on deposit inflows, banks can obtain funding from the money market to support credit expansion.
+Liability management theory originated in the 1960s as financial institutions began to diversify funding sources beyond customer deposits. The theory suggests that banks can actively manage both sides of the balance sheet—assets and liabilities—to ensure liquidity and profitability. Instead of passively waiting for deposit inflows, banks can access wholesale funding markets, issue short-term instruments and use derivatives to hedge funding risks.
 
-In the context of counterparty credit risk, liability management implies that a financial institution should not only manage the risk of default from its borrowers but also the risk from its own funding sources. When a bank’s liability structure becomes unstable, counterparty exposures can amplify systemic risk. Therefore, liability management theory emphasizes comprehensive monitoring of short-term borrowing, interbank financing, and derivative obligations (Gibson 2005; Basel Committee on Banking Supervision 2011).
+In relation to counterparty credit risk, liability management underscores the interdependence between funding stability and credit exposure. A bank with an unstable liability structure may amplify systemic risk when counterparties simultaneously withdraw funding or default. Therefore, this theory calls for comprehensive monitoring of interbank borrowing, securities financing and derivatives obligations (Gibson 2005; Basel Committee on Banking Supervision 2011).
 
-Together, asset and liability management theories constitute the theoretical foundation for integrated credit-risk management in modern financial institutions. They provide the conceptual basis for quantitative models such as the KMV model used later in this study.
+In the Chinese context, scholars have argued that domestic banks often rely excessively on deposit-based funding and lack diversified liability structures. To align with international standards, they have proposed the introduction of dynamic-liability-management systems that incorporate market-based instruments, capital-market borrowing and liquidity buffers. This evolution will help Chinese banks mitigate counterparty risks associated with concentrated short-term liabilities.
+
+Asset management and liability management together form the theoretical foundation of integrated credit-risk management. They provide both the conceptual and methodological basis for quantitative models such as the KMV framework, which will be applied in subsequent chapters.
 
 ---
 
@@ -24,55 +28,59 @@ Together, asset and liability management theories constitute the theoretical fou
 
 ### 2.2.1 Theoretical Overview
 
-The KMV model, developed by KMV Corporation in the 1990s and later acquired by Moody’s, is based on Merton’s option-pricing theory. It applies the concept of corporate assets as underlying variables and liabilities as strike prices to estimate the probability of default. The model assumes that a company defaults when the market value of its assets falls below its debt obligations at maturity (Duffie 2003).
+The KMV model was developed by KMV Corporation in the 1990s and later acquired by Moody’s Analytics. It is derived from Merton’s option-pricing theory, which treats a company’s equity as a call option on its total assets with the strike price equal to the face value of debt. Default occurs when the market value of the firm’s assets falls below its debt obligations at maturity (Duffie 2003).
 
-Mathematically, the model can be summarized as follows:
+Let:
 
-Let  
+- \(V_A\) denote the market value of assets,  
+- \(D\) denote the book value of debt (default point),  
+- \(\sigma_A\) denote the asset volatility, and  
+- \(T\) denote the time horizon.
 
-- \(V_A\) = market value of firm assets  
-- \(D\) = debt value (default point)  
-- \(\sigma_A\) = asset volatility  
-- \(T\) = time horizon  
-
-The distance to default (DD) is given by
+The **distance to default (DD)** is expressed as
 
 $$
 DD = \frac{\ln(V_A / D) + (r - 0.5\sigma_A^2)T}{\sigma_A \sqrt{T}}
 $$
 
-and the expected default frequency (EDF) is derived as
+and the **expected default frequency (EDF)** is derived as
 
 $$
 EDF = N(-DD)
 $$
 
-where \(N(\cdot)\) is the cumulative normal distribution function.
+where \(N(\cdot)\) represents the cumulative normal distribution function.
 
-The advantage of the KMV model lies in its ability to estimate forward-looking default probabilities based on market information rather than accounting data. It links credit-risk measurement with option pricing, providing a bridge between market-risk and credit-risk disciplines (Brigo and Capponi 2010; Pykhtin and Zhu 2006).
+The KMV model’s advantage lies in its ability to infer default probabilities directly from market data rather than from accounting information. It links credit-risk measurement with option-pricing theory, thus bridging the gap between market and credit risk (Brigo and Capponi 2010; Pykhtin and Zhu 2006).
+
+Chinese researchers have also explored the KMV framework in domestic markets. Their studies have shown that market-value-based models can be applied to evaluate listed companies’ default risk, though such applications face challenges due to incomplete data disclosure and market inefficiencies. These findings highlight the importance of developing localized calibration techniques that account for regional financial characteristics.
 
 ### 2.2.2 Research Method of KMV Model
 
-The implementation of the KMV model generally includes the following steps:
+The practical implementation of the KMV model generally involves the following steps:
 
 1. **Estimation of asset value and volatility**  
-   The model treats a firm’s equity as a call option on its assets with strike price equal to the face value of debt. Using the Black-Scholes option formula, the market value and volatility of the firm’s assets can be estimated iteratively from observed equity prices and debt data.
+   The firm’s equity is treated as a call option on its assets, and the Black–Scholes option model is used to estimate the market value and volatility of assets through iterative calculations. Market equity value and volatility are observable, whereas asset parameters are derived endogenously.
 
 2. **Determination of the default point**  
-   The default point \(D\) is typically defined as the sum of short-term liabilities and half of long-term liabilities. This definition approximates the level at which a firm is expected to default.
+   The default point \(D\) is typically defined as the sum of short-term liabilities and half of long-term liabilities. This reflects the level of total obligations that may trigger default under adverse conditions.
 
 3. **Computation of distance to default (DD) and expected default frequency (EDF)**  
-   Once asset value and volatility are estimated, the DD and EDF can be calculated using the formulas above. The EDF is a key indicator of a firm’s credit quality.
+   Once \(V_A\) and \(\sigma_A\) are obtained, the DD and EDF are computed using the formulas above. The EDF serves as a forward-looking indicator of default probability.
 
 4. **Empirical validation**  
-   Empirical studies (Lu and Juan 2011; Gibson 2005) confirm that KMV-derived default probabilities correlate closely with actual default rates, supporting the model’s predictive effectiveness.
+   Empirical analyses conducted by both international and domestic researchers (Lu and Juan 2011; Gibson 2005) have demonstrated a strong correlation between KMV-estimated EDF values and actual default rates. This confirms the model’s predictive accuracy and practical relevance.
 
-The KMV model has been widely adopted by commercial banks and investment institutions to assess counterparty credit risk and to determine capital requirements under Basel II and Basel III frameworks (Basel Committee on Banking Supervision 2006; Basel Committee on Banking Supervision 2011).
+In the Chinese literature, researchers have tested the KMV model using samples of listed manufacturing and financial companies. They have found that the model captures relative differences in credit quality but that calibration of asset volatility remains sensitive to market conditions. Consequently, some scholars have proposed combining the KMV framework with GARCH models to improve volatility estimation and enhance EDF precision.
+
+The KMV model has now become one of the most widely used approaches for default-probability estimation and credit-risk evaluation in global banking practice. It also serves as an important reference for capital requirement calculations under Basel II and Basel III (Basel Committee on Banking Supervision 2006; Basel Committee on Banking Supervision 2011).
 
 ---
 
 ## Summary of Chapter 2
 
-This chapter reviewed the theoretical foundation of credit-risk management, focusing on asset management, liability management, and the KMV model. Together, these theories provide the analytical tools necessary to understand counterparty credit risk. Asset and liability management explain how financial institutions structure their portfolios and funding sources to balance liquidity and profitability, while the KMV model offers a quantitative approach to estimating default probabilities using market data.
+This chapter introduced the theoretical foundation of counterparty credit-risk analysis. Asset management and liability management theories explain how financial institutions maintain a balance between liquidity, profitability and solvency, while the KMV model provides a quantitative tool to measure default probability using market-based information.
 
-These theoretical foundations establish the basis for the next chapter, which will apply these models to measure counterparty credit risk through comparative analysis and empirical estimation.
+International and domestic studies both affirm that effective CCR management depends on integrating qualitative judgement with quantitative modelling. In particular, Chinese research has begun to adapt models such as KMV to local market environments, contributing to the broader understanding of credit-risk management in emerging economies.
+
+The next chapter will extend these theoretical insights to construct specific measurement models for counterparty credit risk and to compare their empirical implications.
