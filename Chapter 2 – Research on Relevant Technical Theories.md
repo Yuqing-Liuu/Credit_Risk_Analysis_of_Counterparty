@@ -37,19 +37,20 @@ Let:
 - \(\sigma_A\) denote the asset volatility, and  
 - \(T\) denote the time horizon.
 
-The **distance to default (DD)** is expressed as
+The distance to default (DD) is expressed as
 
 $$
 DD = \frac{\ln(V_A / D) + (r - 0.5\sigma_A^2)T}{\sigma_A \sqrt{T}}
 $$
 
-and the **expected default frequency (EDF)** is derived as
+and the expected default frequency (EDF) is derived as
 
 $$
 EDF = N(-DD)
 $$
 
-where \(N(\cdot)\) represents the cumulative normal distribution function.
+where \( N(x) \) denotes the cumulative normal distribution function.
+
 
 The KMV model’s advantage lies in its ability to infer default probabilities directly from market data rather than from accounting information. It links credit-risk measurement with option-pricing theory, thus bridging the gap between market and credit risk (Brigo and Capponi 2010; Pykhtin and Zhu 2006).
 
