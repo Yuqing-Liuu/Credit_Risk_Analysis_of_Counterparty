@@ -1,4 +1,4 @@
-# Chapter 2 Research on Relevant Technical Theories
+# Chapter 2 Research on Relevant Theories
 
 ## 2.1 Credit Risk Management Theory
 
