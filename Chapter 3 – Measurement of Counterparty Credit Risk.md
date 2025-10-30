@@ -108,3 +108,4 @@ Furthermore, stress testing and scenario analysis have become mandatory componen
 This chapter introduced various methods for measuring counterparty credit risk. The development of CCR measurement has evolved from the simple Current Exposure Method (CEM) to the Internal Model Method (IMM), Standardized Method (SM), and Non-Internal Model Method (NIMM). Each approach represents a trade-off between accuracy and operational complexity.
 
 The chapter also discussed capital requirements for central counterparties and the integration of CVA, wrong-way risk, and stress testing into modern frameworks. These developments form the foundation for the empirical analysis presented in the following chapter, which applies the discussed models to estimate counterparty credit exposures and assess their implications for risk-weighted assets.
+
