@@ -56,10 +56,10 @@ The Internal Model Method allows banks to estimate exposure through Monte Carlo 
 Formally, the effective expected positive exposure (EEPE) is given by:
 
 $$
-EEPE = \frac{1}{T^*} \int_0^{T^*} \max(EE_t, 0) \, dt
+\mathrm{EEPE}=\frac{1}{T^{\ast}}\int_{0}^{T^{\ast}} \max(EE_t,\,0)\,dt
 $$
 
-where \(T^*\) is the effective maturity of the portfolio. The IMM requires supervisory approval and extensive back-testing to validate the accuracy of exposure estimation models.
+where \(T^{\ast}\) is the effective maturity of the portfolio. The IMM requires supervisory approval and extensive back-testing to validate the accuracy of exposure estimation models.
 
 ### 3.2.3 Standardized Method (SM)
 
