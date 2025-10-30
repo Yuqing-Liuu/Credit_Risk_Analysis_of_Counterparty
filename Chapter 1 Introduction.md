@@ -1,6 +1,6 @@
 # Chapter 1 Introduction
 
-## 1.1 Research Background and Significance
+## 1.1 Research Background
 
 ### 1.1.1 Research Background
 
