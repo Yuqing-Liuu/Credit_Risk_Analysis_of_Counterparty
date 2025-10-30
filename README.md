@@ -7,11 +7,9 @@
     - 1.1.1 Research Background  
     - 1.1.2 Research Significance  
   - 1.2 Research Status at Home and Abroad  
-    - 1.2.1 Foreign Research Status  
-    - 1.2.2 Domestic Research Status  
+    - 1.2.1 Research Status   
   - 1.3 Research Methods and Ideas  
-    - 1.3.1 Research Methods  
-    - 1.3.2 Technical Route  
+    - 1.3.1 Research Methods   
 
 - **Chapter 2 Research on Relevant Technical Theories**
   - 2.1 Credit Risk Management Theory  
