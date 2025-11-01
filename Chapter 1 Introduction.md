@@ -24,7 +24,7 @@ Since the Basel Committee (2011) integrated CCR regulation into the internationa
 
 ---
 
-## 1.2 Research Status at Home and Abroad
+## 1.2 Research Status
 
 Counterparty credit risk arises when one contracting party may incur losses due to the default of the other during the life of a financial transaction. Because the exposure is contingent on market factors, CCR links market risk and credit risk in a unique way. As financial innovation deepens, institutions face more counterparties and increasingly complex exposures, which magnifies the likelihood of systemic instability. Therefore, studying counterparty credit-risk management has become essential for maintaining the soundness of the financial system.
 
