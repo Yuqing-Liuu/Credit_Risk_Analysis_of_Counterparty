@@ -14,7 +14,7 @@
 - **Chapter 3 Measurement of Counterparty Credit Risk**
   - 3.1 Basic Overview  
   - 3.2 Measurement Models (CEM, IMM, SM, NIMM)  
-  - 3.3 Central Counterparty Credit Risk  
+  - 3.3 Counterparty Credit Risk  
 
 - **Chapter 4 Empirical Analysis of Counterparty Credit Risk**
   - 4.1 Overview  
