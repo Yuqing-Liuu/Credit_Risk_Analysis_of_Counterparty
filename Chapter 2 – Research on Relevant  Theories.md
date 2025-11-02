@@ -105,6 +105,3 @@ EDF = P(V < DPT) = N\left(\frac{DPT - V}{V\sigma_A}\right) = N(-DD)
 $$
 
 In this framework, the firm’s future default risk is determined jointly by asset volatility and market value. By substituting the relevant parameters, the model provides a forward-looking indicator of credit exposure. Combining this with the anticipated default probability, the KMV model yields the firm’s credit-risk efficiency, offering a quantitative reference for empirical evaluation.
-
-Therefore, in this study, the KMV model serves as the foundational framework for assessing counterparty credit risk. By integrating dynamic simulation and parameter calibration, it provides a realistic measurement of firms’ default probabilities, supporting effective risk management and regulatory analysis.
-
