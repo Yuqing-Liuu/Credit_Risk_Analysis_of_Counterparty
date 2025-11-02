@@ -128,9 +128,7 @@ By combining quantitative monitoring with institutional judgment, the internal m
 
 ## 5.3 Regulatory Strategies
 
-The empirical and analytical results obtained in this study also have significant implications for regulatory supervision and macroprudential policy.  
-As banking regulation increasingly emphasizes the alignment between market-based indicators and capital adequacy requirements, the GARCH–KMV framework offers a quantitative bridge between internal risk modeling and external regulatory expectations.  
-This section discusses how the model can be applied within the context of Basel III and related supervisory practices.
+The empirical and analytical findings of this study carry important implications for regulatory supervision and macroprudential policy formulation. As contemporary banking regulation increasingly emphasizes the integration of market-based risk indicators with capital adequacy frameworks, the KMV–GARCH model provides a quantitative mechanism for aligning internal risk assessment practices with external regulatory expectations. This section examines the applicability of the proposed framework within the Basel III regulatory architecture and broader supervisory contexts.
 
 ### 5.3.1 Market-Based Complement to Basel III Capital Framework
 
