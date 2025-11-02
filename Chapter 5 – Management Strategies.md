@@ -96,19 +96,27 @@ This approach allows management to:
 
 ### 5.2.3 Internal Governance and Decision Framework
 
-To ensure the consistent use of model outputs, governance must define clear responsibilities between quantitative teams, credit officers, and senior management.  
-A typical governance structure may include:
+To ensure robust and consistent application of model outputs, the institution must establish a clearly delineated governance structure that assigns specific responsibilities across quantitative modeling teams, credit risk officers, and senior management. A well-designed governance architecture typically comprises the following organizational components:
+Three-Tier Governance Structure
 
-- **Model Oversight Committee:**  
-  Responsible for validating model assumptions (e.g., asset volatility estimation, default point calibration) and reviewing quarterly performance metrics.  
+1. Model Oversight Committee (Technical Validation Layer)
+Validates core modeling assumptions, including asset volatility estimation methodologies, default point calibration, and distributional specifications;
+Conducts periodic model performance reviews (e.g., quarterly backtesting, out-of-sample validation);
+Evaluates model stability and recommends recalibration when systematic biases or performance degradation are detected.
 
-- **Risk Control Unit:**  
-  Operates the monitoring dashboard, manages limit adjustments, and reports significant deviations to management.  
+2. Risk Control Unit (Operational Execution Layer)
+Maintains and operates the real-time monitoring dashboard and alert generation system;
+Implements limit adjustments and exposure controls based on predefined escalation protocols;
+Prepares regular reporting on model-triggered alerts, false positive rates, and material credit quality migrations for senior management review.
 
-- **Senior Credit Committee:**  
-  Makes final exposure decisions and approves policy changes triggered by model-based alerts.
+4. Senior Credit Committee (Strategic Decision Layer)
+Exercises final authority over counterparty exposure decisions, particularly in cases where model signals conflict with qualitative assessments;
+Approves policy modifications, threshold adjustments, and exception handling protocols triggered by persistent model alerts;
+Ensures alignment between model-based risk measures and the institution's overall credit risk appetite framework.
 
-Such a governance framework ensures transparency in model usage and mitigates the risk of over-reliance on automated outputs.
+This multi-layered governance structure serves several critical functions. First, it establishes clear lines of accountability, ensuring that model development, operational implementation, and strategic decision-making remain appropriately separated to prevent conflicts of interest. Second, it embeds systematic human oversight at each stage, mitigating the risks of algorithmic overconfidence and mechanical reliance on automated outputs. Third, the framework promotes transparency in model usage, requiring explicit documentation of how quantitative signals inform credit decisions while preserving managerial discretion for complex or ambiguous cases.
+By institutionalizing these checks and balances, the governance framework ensures that the DD-based assessment system enhances—rather than replaces—human judgment, thereby fostering responsible integration of quantitative models into credit risk management practice.
+
 
 ### 5.2.4 Feedback and Model Refinement
 
