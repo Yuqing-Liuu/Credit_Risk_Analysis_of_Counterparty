@@ -136,13 +136,7 @@ Under the Basel III framework, banks are mandated to maintain minimum Tier 1 cap
 
 ### 5.3.2 Alignment with SA-CCR and Counterparty Exposure Measurement
 
-Basel III introduces the Standardized Approach for Counterparty Credit Risk (SA-CCR) to improve the sensitivity and consistency of exposure measurement.  
-While SA-CCR determines the exposure at default (EAD) based on notional values and risk factors, it remains static with respect to market-implied credit quality.  
-By contrast, the GARCH–KMV framework dynamically reflects changes in creditworthiness through variations in volatility and equity valuation.
-
-Integrating DD-based metrics into SA-CCR calibration can enhance **exposure responsiveness**.  
-For example, counterparties whose DD falls into the lowest quartile of the peer distribution could be assigned higher exposure multipliers or stricter collateral haircuts.  
-This would introduce a risk-sensitive element that aligns more closely with actual market perceptions of credit risk while remaining consistent with regulatory prudence.
+Basel III introduces the Standardized Approach for Counterparty Credit Risk (SA-CCR) to improve the risk sensitivity and cross-jurisdictional consistency of exposure measurement. While SA-CCR determines Exposure at Default (EAD) based on derivative notional values, supervisory risk factors, and hedging set structures, its calibration remains largely insensitive to market-implied shifts in counterparty credit quality. By contrast, the KMV–GARCH framework provides a dynamic reflection of creditworthiness through real-time adjustments in asset volatility and equity market valuations.Incorporating DD-based metrics into SA-CCR calibration procedures can significantly enhance the risk responsiveness of regulatory exposure calculations. For instance, counterparties whose DD values fall within the lowest quartile of the peer distribution could be subject to elevated exposure multipliers or more conservative collateral haircut rates. Such adjustments would introduce a market-sensitive overlay to the standardized framework, aligning regulatory exposure measures more closely with prevailing market assessments of credit risk while preserving the prudential objectives and operational simplicity of the SA-CCR methodology.This integration represents a practical pathway toward dynamic regulatory calibration, whereby standardized approaches retain their computational tractability and comparability across institutions, yet incorporate forward-looking market intelligence to better capture emerging counterparty vulnerabilities.
 
 ### 5.3.3 Supervisory Monitoring and Systemic Risk Indicators
 
