@@ -243,20 +243,6 @@ The analysis focuses on the estimation of the distance to default (DD) for ten m
 <img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  
 <img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" /> 
 
-Figure presents the ranking of **Distance to Default (DD)** on the last sample day. All banks display large solvency buffers, with DD values ranging between approximately 110 and 160. This implies that market-implied firm values are far above their respective default points, confirming overall solvency stability within the U.S. banking sector.
-
-The ranking pattern aligns with expectations:
-
-- **Top-tier global banks** (e.g., JPMorgan Chase, PNC, Bank of America) occupy the upper end (DD ≈ 145–160), reflecting stronger capitalization, diversified portfolios, and access to stable funding.
-- **Regional banks** (e.g., M&T Bank, Truist Financial) show lower DD values (≈110–120), consistent with smaller balance sheets and higher exposure to localized risks.
-
-Two insights emerge from Figure 4.1.  
-First, the DD dispersion is **persistent** across time, suggesting that solvency rankings reflect structural factors—business model, funding mix, and governance—rather than short-lived market noise.  
-Second, moderate variation of the parameter \( \alpha \) (between 0.3 and 0.7) changes the DD level but not the relative ranking, confirming the robustness of these findings.
-
-
-<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/d7ba79bf-c884-48a2-8322-94442227d098" /> Firgire4.3
-
 Figures presents the cross-sectional distribution of distance to default (DD) across the ten sample institutions as of the final observation date, alongside the relationship between equity volatility and solvency margins. The upper panel reveals considerable dispersion in DD values, ranging from approximately 110 for M&T Bank to 160 for JPMorgan Chase. This 45% spread, while occurring at uniformly high absolute levels, reflects meaningful differences in market-perceived creditworthiness among institutions.
 JPMorgan Chase and PNC Financial emerge as the most solvent institutions by this metric, consistent with their status as diversified, systemically important banks with substantial capital buffers and stable earnings profiles. Bank of America and Capital One Financial occupy the upper-middle tier, while regional banks such as Truist Financial, U.S. Bank, and M&T Bank cluster toward the lower end of the distribution. Notably, even the institution with the lowest DD—M&T Bank at 110—maintains a solvency margin that implies negligible default probability under any realistic scenario.
 The lower panel illustrates the inverse relationship between equity volatility (σ_E) and distance to default, a core prediction of the structural credit risk framework. Institutions with lower volatility—JPM (σ_E ≈ 0.23) and PNC (σ_E ≈ 0.22)—exhibit substantially higher DD values, reflecting both greater stability in market valuations and larger capital cushions. Conversely, M&T Bank, with the highest volatility at approximately 0.295, displays the lowest DD in the sample. This negative correlation (ρ ≈ -0.85) confirms that solvency margins compress as asset value uncertainty increases, even when absolute leverage ratios remain similar across institutions.
@@ -265,10 +251,8 @@ From a risk management perspective, these results underscore two key insights. F
 
 ### 4.5.2 Sensitivity to Leverage and Volatility
 
-Figure 4.2 plots **equity volatility** \( \sigma_E \) against **Distance to Default**. The relationship is clearly **negative**, confirming the theoretical expectation that higher volatility corresponds to lower solvency margins.
-
 - In our sample, \( \sigma_E \) ranges roughly from 0.22 to 0.30 (annualized). Moving from the low-volatility to the high-volatility group corresponds to a material decline in DD.
-- The GARCH(1,1) process captures volatility spikes, such as the early-2020 COVID-19 episode, during which the model records a temporary compression of DD, followed by recovery as volatility normalizes.
+- The GARCH(1,1) process captures volatility spikes, during which the model records a temporary compression of DD, followed by recovery as volatility normalizes.
 
 The leverage channel operates through the default-point term. Holding volatility fixed, a higher **total liability ratio** increases \( DP_t \), thus reducing \( \ln(V_t/DP_t) \) and DD. Banks with heavier reliance on short-term or wholesale funding exhibit lower DD, consistent with the structural model intuition.
 
@@ -303,26 +287,17 @@ From a practical standpoint, the estimated DD can be interpreted as a market-bas
 
 The application of the GARCH–KMV framework to ten major U.S. banking institutions over 2018–2024 yields several noteworthy findings regarding counterparty credit risk dynamics in the post-crisis regulatory environment.
 The estimated distance to default (DD) values, ranging between 110 and 160 across all sample institutions, indicate substantial solvency margins throughout the observation period. These magnitudes correspond to negligible expected default frequencies (EDF), effectively near zero for all banks. Such outcomes are consistent with the high capitalization standards imposed under Basel III and reflect the relatively stable macrofinancial conditions that have characterized the U.S. banking sector since the 2008 financial crisis.
+
 Cross-sectional variation in DD values reveals meaningful differences in institutional risk profiles. Systemically important banks such as JPMorgan Chase and PNC Financial consistently maintain the highest solvency margins, reflecting robust capital buffers and diversified risk exposures. Regional institutions including M&T Bank and Truist Financial exhibit modestly lower DD estimates, suggesting greater sensitivity to market volatility. Nonetheless, all institutions remain well above critical default thresholds throughout the sample period.
+
 The role of volatility and leverage in determining solvency is confirmed through the GARCH(1,1) specification. Higher conditional volatility compresses DD by amplifying uncertainty surrounding asset valuations, while elevated leverage ratios mechanically reduce the distance between asset and liability values. The incorporation of time-varying volatility thus captures risk dynamics that would remain undetected under constant-volatility assumptions, particularly during periods of market stress such as the COVID-19 pandemic in 2020. The temporary decline in DD during this episode, followed by rapid recovery, demonstrates the model's responsiveness to macroeconomic shocks.
 From a regulatory perspective, the market-implied solvency measures align closely with Basel III capital requirements. The observed DD values correspond to capital buffers substantially exceeding the minimum Tier 1 ratio of 8.5 percent, though the market-based approach offers a forward-looking and continuously updated assessment that complements static regulatory metrics. This dual perspective proves valuable for real-time counterparty risk monitoring and provides a bridge between accounting-based capital measures and market-implied risk indicators.
+
 The empirical analysis demonstrates that integrating GARCH-based volatility into the structural credit risk framework yields coherent and empirically robust assessments of banking sector solvency. These findings not only validate the theoretical foundations of the model but also establish its practical utility for financial stability surveillance and capital adequacy evaluation. The synthesis of these results with broader theoretical and policy considerations will be addressed in the concluding chapter.
 
 
 ---
 
-**References**
 
-- Basel Committee on Banking Supervision (2011). *Basel III: A global regulatory framework for more resilient banks and banking systems.*  
-- Basel Committee on Banking Supervision (2021). *Revisions to the Basel Framework.*  
-- Bollerslev, T. (1986). *Generalized Autoregressive Conditional Heteroskedasticity.* Journal of Econometrics, 31(3), 307–327.  
-- Duffie, D., & Singleton, K. (2003). *Credit Risk: Pricing, Measurement, and Management.* Princeton University Press.  
-- Engle, R. (1982). *Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation.* Econometrica, 50(4), 987–1007.  
-- Gregory, J. (2015). *Counterparty Credit Risk and Credit Valuation Adjustment: A Continuing Challenge for Global Financial Markets.* 2nd ed. Wiley Finance.  
-- Hull, J. (2018). *Risk Management and Financial Institutions.* 5th ed. Wiley.  
-- Merton, R. (1974). *On the Pricing of Corporate Debt: The Risk Structure of Interest Rates.* Journal of Finance, 29(2), 449–470.  
-- Pykhtin, M., & Zhu, S. (2006). *A Guide to Modeling Counterparty Credit Risk.* Risk Magazine, March 2006.
-
----
 
 
