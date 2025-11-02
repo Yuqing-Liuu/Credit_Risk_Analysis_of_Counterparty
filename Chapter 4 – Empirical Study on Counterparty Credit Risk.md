@@ -6,7 +6,7 @@
 
 We has applied the GARCH–KMV framework to quantify counterparty credit risk (CCR) among major U.S. banking institutions over the 2018–2024 period. The methodology integrates market-derived equity volatility with balance sheet fundamentals to construct firm-specific measures of Distance to Default (DD).
 
-The empirical investigation pursues three primary objectives. First, it operationalizes the KMV structural credit risk model while incorporating GARCH-based conditional volatility estimates to account for time-varying market risk dynamics. Second, it derives institutional default probabilities through the estimation of each bank's distance to the default threshold. Third, it examines the implications of these risk measures for regulatory capital requirements under the Basel III accords.
+The empirical investigation pursues three primary objectives. First, it operationalizes the KMV structural credit risk model while incorporating GARCH-based conditional volatility estimates to account for time-varying market risk dynamics. Second, it derives institutional default risk through the estimation of each bank's distance to the default threshold. Third, it examines the implications of these risk measures for regulatory capital requirements under the Basel III accords.
 
 ---
 
