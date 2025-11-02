@@ -3,8 +3,8 @@
 ## Contents
 - **Abstract**
 - **Chapter 1 Introduction**
-  - 1.1 Research Background and Significance  
-  - 1.2 Research Status at Home and Abroad  
+  - 1.1 Research Background
+  - 1.2 Research Status
   - 1.3 Research Methods and Ideas  
 
 - **Chapter 2 Research on Relevant Technical Theories**
