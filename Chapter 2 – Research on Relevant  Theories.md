@@ -29,9 +29,6 @@ Liability management theory is built upon credit-risk awareness. To a certain ex
 
 Since the Basel Committee on Banking Supervision issued new credit-risk and counterparty-risk frameworks in 2013, liability management has taken on even greater importance. The updated capital requirements for counterparty exposures highlight the need for financial institutions to align liability structures with risk-based capital adequacy ratios. Under these conditions, the liability management framework serves as a crucial complement to asset management, enhancing the institution’s ability to mitigate unexpected funding shocks and market disruptions.
 
-By integrating the logic of liability management into credit-risk analysis, this study evaluates how banks can use diversified borrowing strategies—such as interbank lending, bond issuance, and repurchase agreements—to optimise liquidity and maintain financial stability. The theoretical core of liability management thus provides a foundation for building hierarchical and systematic liquidity-support mechanisms. In doing so, it contributes to the improvement of comprehensive credit-risk management systems.
-
-
 ## 2.2.1 Theoretical Overview
 
 In 1997, the U.S.-based KMV Corporation proposed the KMV model, which is primarily used to estimate the probability of default for borrowing enterprises. The model suggests that, given a certain level of debt, the magnitude of credit risk is determined by the market value of the debtor’s assets. However, since assets themselves are not directly traded in the market, their market value cannot be observed directly. The KMV model therefore transforms the problem of loan default into one of evaluating a firm’s repayment capability by analysing its asset value from the perspective of corporate borrowers.
