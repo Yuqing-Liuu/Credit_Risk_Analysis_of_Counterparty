@@ -82,9 +82,4 @@ The EDF derived under \(Q\) provides an alternative estimate of credit spreads t
 
 ---
 
-## 4.4 Summary of This Chapter
-
-This chapter conducted an empirical analysis of counterparty credit risk based on the KMV model. Using data from listed financial institutions, it estimated exposure, default probability, and risk-weighted assets under different conditions. The results verify the KMV model’s ability to describe the relationship between leverage, volatility, and default risk.
-
-The findings show that collateralization and margin agreements significantly reduce expected exposure, while higher equity volatility and leverage increase counterparty risk. The consistency between empirical EDF estimates and market-based indicators demonstrates the validity of the model for practical risk-management applications.  
-These results lay the groundwork for the following chapter, which proposes management strategies for counterparty credit risk.
+<img width="469" height="308" alt="CCR" src="https://github.com/user-attachments/assets/f59be058-79b8-49b5-8137-b9f262772dfc" />
