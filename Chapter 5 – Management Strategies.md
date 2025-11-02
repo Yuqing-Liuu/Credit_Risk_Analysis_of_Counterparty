@@ -126,6 +126,72 @@ If the model consistently overestimates or underestimates risk for specific sect
 This iterative process ensures that the KMV–GARCH framework remains aligned with evolving market structures and regulatory expectations.  
 By combining quantitative monitoring with institutional judgment, the internal management system not only strengthens credit discipline but also enhances the bank’s strategic resilience under volatile market conditions.
 
+## 5.3 Regulatory Strategies
+
+The empirical and analytical results obtained in this study also have significant implications for regulatory supervision and macroprudential policy.  
+As banking regulation increasingly emphasizes the alignment between market-based indicators and capital adequacy requirements, the GARCH–KMV framework offers a quantitative bridge between internal risk modeling and external regulatory expectations.  
+This section discusses how the model can be applied within the context of Basel III and related supervisory practices.
+
+### 5.3.1 Market-Based Complement to Basel III Capital Framework
+
+Under the Basel III regime, banks are required to maintain a minimum level of Tier 1 capital to absorb unexpected losses and to apply standardized or internal model approaches to estimate counterparty exposures.  
+Traditional risk-weighted asset (RWA) calculations, however, rely heavily on static balance-sheet inputs and standardized risk weights that may not fully capture real-time market dynamics.  
+The GARCH–KMV model addresses this limitation by producing a **market-implied solvency measure** that evolves with changing asset volatility and leverage.
+
+The Distance to Default (DD) can be interpreted as a **market-based capital buffer**, representing the number of standard deviations by which a firm’s asset value exceeds its default point.  
+Supervisors can monitor the distribution of DD across banks to identify potential outliers whose solvency buffers narrow rapidly under stress.  
+In this sense, the GARCH–KMV model provides an early-warning complement to regulatory ratios such as the Common Equity Tier 1 (CET1) ratio.
+
+### 5.3.2 Alignment with SA-CCR and Counterparty Exposure Measurement
+
+Basel III introduces the Standardized Approach for Counterparty Credit Risk (SA-CCR) to improve the sensitivity and consistency of exposure measurement.  
+While SA-CCR determines the exposure at default (EAD) based on notional values and risk factors, it remains static with respect to market-implied credit quality.  
+By contrast, the GARCH–KMV framework dynamically reflects changes in creditworthiness through variations in volatility and equity valuation.
+
+Integrating DD-based metrics into SA-CCR calibration can enhance **exposure responsiveness**.  
+For example, counterparties whose DD falls into the lowest quartile of the peer distribution could be assigned higher exposure multipliers or stricter collateral haircuts.  
+This would introduce a risk-sensitive element that aligns more closely with actual market perceptions of credit risk while remaining consistent with regulatory prudence.
+
+### 5.3.3 Supervisory Monitoring and Systemic Risk Indicators
+
+From a macroprudential perspective, the aggregate DD distribution across institutions can serve as a **systemic solvency indicator**.  
+A sudden decline in the sector-wide median DD, or a significant increase in its dispersion, may signal rising stress in the banking system.  
+Regulators could use these indicators alongside existing macro-stress testing frameworks to identify contagion channels and concentration risks.
+
+In practice, supervisory authorities could implement a monitoring dashboard based on the following metrics:
+
+- The cross-sectional mean and variance of DD among major banks;  
+- The correlation of DD dynamics across counterparties;  
+- The rate of change in market volatility inferred from the GARCH component.  
+
+Such metrics would provide early evidence of liquidity stress or heightened counterparty interdependence, enabling pre-emptive policy measures such as targeted capital surcharges or enhanced collateral requirements.
+
+### 5.3.4 Implementation and Challenges
+
+Although the GARCH–KMV framework aligns well with regulatory objectives, several challenges must be acknowledged before large-scale adoption:
+
+1. **Data and Model Transparency:**  
+   Regulators require transparent inputs and validation procedures.  
+   The KMV approach depends on market prices and estimated parameters that may vary across institutions, necessitating standardized disclosure formats.
+
+2. **Model Risk and Parameter Sensitivity:**  
+   Asset volatility (\(\sigma_A\)) and default-point calibration introduce estimation uncertainty.  
+   Supervisors must ensure that internal banks’ implementations are back-tested against realized credit events or market stress outcomes.
+
+3. **Regulatory Integration:**  
+   While DD provides valuable supplementary insight, it should complement—not replace—existing RWA and EAD frameworks.  
+   Effective integration would involve mapping DD to regulatory buffers such as the countercyclical capital buffer (CCyB) or the internal ratings-based (IRB) approach.
+
+### 5.3.5 Policy Perspective
+
+From a policy standpoint, the use of GARCH–KMV outputs in regulatory surveillance embodies the broader Basel III philosophy of **risk sensitivity and dynamic capital adjustment**.  
+By tracking real-time solvency movements, supervisors can anticipate periods of systemic fragility rather than reacting post-factum.  
+This aligns with the ongoing regulatory transition from static compliance reporting toward continuous, data-driven monitoring of financial stability.
+
+In summary, the integration of market-based models such as GARCH–KMV into the regulatory toolkit can enhance both **micro-prudential supervision**—by improving counterparty-level sensitivity—and **macro-prudential oversight**—by detecting system-wide vulnerabilities.  
+While the framework is not a substitute for formal regulatory capital calculation, it provides an empirically grounded complement that strengthens the resilience of the overall banking system.
+
+
 
 
 
