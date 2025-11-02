@@ -50,5 +50,5 @@ This research builds on the Basel Committee’s (2006, 2011) regulatory framewor
 
 1. **Literature analysis** – reviewing key international studies on credit-risk management (Duffie 2003; Brigo and Capponi 2010; Pykhtin and Zhu 2006) to trace theoretical development and modelling evolution;  
 2. **Qualitative analysis** – defining the characteristics, mechanisms, and preventive measures of CCR based on Basel regulations and prior research;  
-3. **Empirical analysis** – applying the KMV framework to market data, deriving model parameters, and evaluating empirical results to provide policy-relevant conclusions.
+3. **Empirical analysis** – applying the KMV framework to market data, evaluating empirical results to provide policy-relevant conclusions.
 
