@@ -84,15 +84,14 @@ Specifically, institutions may incorporate the following practices:
 
 ### 5.2.2 Portfolio-Level Risk Aggregation
 
-Individual counterparty risk must be aggregated at the portfolio level to evaluate systemic vulnerabilities.  
-By aggregating DD and volatility measures across all counterparties, the institution can identify concentrations of exposure to specific sectors or markets.  
-A portfolio-wide indicator, such as the weighted average DD or exposure-weighted volatility, can be monitored to assess the overall resilience of the counterparty network.
+Individual counterparty risk must be aggregated at the portfolio level to evaluate systemic vulnerabilities and concentration exposures. By consolidating DD and volatility measures across all counterparties, the institution can identify concentrated exposures to specific sectors, geographies, or market segments. Portfolio-wide indicators, such as the weighted average DD or exposure-weighted volatility, should be monitored continuously to assess the overall resilience of the counterparty network.
+This aggregation approach enables management to:
 
-This approach allows management to:
+Detect correlations between counterparties' DD movements during stress periods, revealing potential contagion channels;
+Conduct scenario analyses under simulated market volatility increases to evaluate portfolio-level impact;
+Assess the adequacy of capital buffers against aggregate exposure shocks and concentrated credit events.
 
-- Detect correlations between counterparties’ DD movements during stress periods;  
-- Conduct scenario analyses under simulated market volatility increases;  
-- Evaluate the adequacy of capital buffers against aggregate exposure shocks.
+Such portfolio-level monitoring complements individual counterparty analysis by providing a holistic view of systemic risk, ensuring that credit risk management addresses both idiosyncratic and collective vulnerabilities.
 
 ### 5.2.3 Internal Governance and Decision Framework
 
