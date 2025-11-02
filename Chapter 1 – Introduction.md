@@ -52,7 +52,3 @@ This research builds on the Basel Committee’s (2006, 2011) regulatory framewor
 2. **Qualitative analysis** – defining the characteristics, mechanisms, and preventive measures of CCR based on Basel regulations and prior research;  
 3. **Empirical analysis** – applying the KMV framework to market data, deriving model parameters, and evaluating empirical results to provide policy-relevant conclusions.
 
-
-## Summary of Chapter 1
-
-This chapter reviewed the research background, theoretical and practical significance, and methodological design of the study. It emphasised the increasing importance of counterparty credit-risk management in modern financial systems and introduced the KMV model as a quantitative tool to assess default probability and exposure. The next chapter presents the theoretical foundation underlying credit-risk management and the KMV modelling framework.
