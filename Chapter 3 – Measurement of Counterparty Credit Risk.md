@@ -151,7 +151,7 @@ For an individual clearing member, the prefunded default contribution serves as 
 By linking prefunded resources, default contributions, and exposure measures, the framework establishes a capital-adequacy standard consistent with CCP credit-risk sensitivities. This ensures that credit exposure under both current and potential default conditions is measured prudently and in alignment with international supervisory requirements.
 
 
-### 3.3.2 Updated Measurement Model
+### 3.3.2 Measurement Model
 
 Equity and bond transactions, as well as exchange-traded and over-the-counter (OTC) derivatives, form the primary business products considered in this model. To enhance risk sensitivity and alignment between exposures and capital requirements, the updated framework specifies the matching degree between risk weights and different types of counterparty exposures. This structure prepares financial institutions for potential defaults within central counterparty (CCP) clearing arrangements.
 
