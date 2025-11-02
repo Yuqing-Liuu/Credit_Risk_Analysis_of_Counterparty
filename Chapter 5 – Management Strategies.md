@@ -2,51 +2,53 @@
 
 ## 5.1 Risk Assessment System
 
-The empirical evidence from Chapter 4 demonstrates that the GARCH–KMV framework can serve as a foundation for a dynamic and market-based **counterparty risk assessment system**.  
-Unlike traditional accounting indicators that rely on quarterly financial statements, this approach captures **real-time solvency conditions** by integrating balance-sheet structure with market-implied volatility.  
-This section proposes a structured design for implementing such a system within financial institutions.
+The empirical analysis in Chapter 4 demonstrates that the GARCH–KMV model provides a practical framework for assessing counterparty credit risk (CCR) from a market-based perspective.  
+Unlike traditional accounting-based measures that often lag behind market dynamics, this approach integrates equity volatility and capital structure to infer the firm’s probability of default in real time.  
+Based on these insights, a structured risk assessment system can be established to support both monitoring and decision-making within financial institutions.
 
-### (1) Model-Based Credit Monitoring
+### 5.1.1 Conceptual Framework
 
-The central element of the assessment framework is the continuous estimation of **Distance to Default (DD)** for each counterparty.  
-The DD reflects the buffer between the firm’s market value and its default point, dynamically adjusted through the GARCH-estimated volatility process:
+The central idea of the proposed assessment system is to use the **Distance to Default (DD)** as a continuous indicator of solvency.  
+A higher DD implies a stronger financial buffer between a firm’s asset value and its default threshold, while a lower DD indicates a tighter margin of safety and thus higher default risk.  
+This indicator captures the combined effect of leverage and volatility—two of the most important determinants of counterparty risk.
 
-$$
-DD_t = \frac{\ln(V_t / DP_t) + (r_t - 0.5\sigma_A^2)\Delta t}{\sigma_A \sqrt{\Delta t}}
-$$
+The daily variation in DD reflects how quickly a firm’s credit quality responds to market conditions.  
+For example, a sharp decline in DD during periods of rising volatility may serve as an early warning signal, prompting the institution to review exposure, collateral levels, and credit terms.
 
-where \(V_t\) represents the market value of the firm’s assets, \(DP_t\) denotes the default threshold, and \(\sigma_A\) is the asset volatility.  
-A declining DD serves as an early-warning signal of deteriorating credit quality, while persistently high DD levels imply stable solvency.
+### 5.1.2 Quantitative Monitoring System
 
-### (2) Dynamic Risk Tier Classification
+To make the KMV–GARCH framework operational, financial institutions can implement a **tiered monitoring mechanism** that classifies counterparties according to their DD distribution within a defined sample period.  
+Rather than using arbitrary cutoffs, DD values can be divided into quantile-based groups (e.g., top 25%, middle 50%, bottom 25%) to reflect relative solvency within the market.
 
-To operationalize the model results, institutions can establish **DD-based classification thresholds** to rank counterparties into discrete risk groups:
+| Quantile Range (of DD) | Credit Risk Level | Recommended Action |
+|------------------------|-------------------|--------------------|
+| Top 25% (highest DD)   | Low risk | Maintain current exposure; normal monitoring |
+| Middle 50%             | Moderate risk | Review exposure concentration; increase frequency of reporting |
+| Bottom 25% (lowest DD) | Elevated risk | Reassess counterparty creditworthiness; adjust limits and collateral requirements |
 
-| DD Range | Risk Category | Action Recommendation |
-|-----------|----------------|------------------------|
-| DD > 120  | Low Risk | Maintain exposure limits |
-| 80 ≤ DD ≤ 120 | Moderate Risk | Increase monitoring and collateral review |
-| DD < 80  | High Risk | Tighten exposure or reduce positions |
+This relative approach avoids the bias of fixed thresholds and allows risk managers to adapt the classification dynamically as market volatility changes.
 
-Such categorization allows the risk management team to link market-based solvency metrics to decision rules on exposure, collateral, and pricing.  
-The thresholds may be recalibrated periodically to reflect macroeconomic conditions or regulatory capital adjustments.
+### 5.1.3 Early Warning and Decision Integration
 
-### (3) Integration into Early-Warning Infrastructure
+The assessment system should be embedded into the institution’s daily credit control process.  
+When DD falls below a predefined percentile or drops sharply within a short time window, the system triggers an **early-warning alert**.  
+Such alerts can automatically link to internal workflows—for instance:
 
-The DD indicator can be incorporated into a **real-time risk monitoring dashboard**, updated daily with market data and firm-level metrics.  
-This integration enables automated alerts when DD values drop below predefined thresholds or when volatility shocks trigger systemic changes.  
-The system should also interface with qualitative inputs—such as sector concentration, funding reliance, or credit rating trends—to form a **hybrid quantitative–qualitative assessment**.
+- Notifying credit officers to conduct a counterparty review;  
+- Re-estimating exposure at default (EAD) and potential future exposure (PFE);  
+- Adjusting collateral requirements or hedging positions.  
 
-### (4) Benefits and Strategic Value
+This integration ensures that market-based risk signals translate directly into practical management actions rather than remaining as theoretical indicators.
 
-The proposed risk assessment system provides several advantages:
+### 5.1.4 Advantages and Practical Implications
 
-- **Timeliness:** It captures counterparty risk shifts immediately after market price changes.  
-- **Objectivity:** It avoids subjective judgment by grounding credit assessment in observable market variables.  
-- **Comparability:** It allows consistent benchmarking of counterparties across portfolios and business lines.  
-- **Forward-Looking Insight:** By linking volatility to credit risk, it provides early signals of potential stress before traditional indicators react.
+The main strength of the GARCH–KMV assessment framework lies in its **forward-looking nature**.  
+It provides early signals of credit deterioration before rating agencies or financial statements reflect the change.  
+Moreover, it aligns well with regulatory principles under Basel III, where capital adequacy and exposure limits are increasingly linked to internal risk sensitivity.
 
-In summary, the GARCH–KMV-based assessment framework offers a **quantitative, adaptive, and transparent** system for evaluating counterparty creditworthiness.  
-It bridges the gap between market dynamics and credit-risk measurement, providing a foundation for both internal decision-making and external regulatory alignment.
+From a practical standpoint, this system allows banks to:
+- Continuously monitor counterparties using real-time market data;  
+- Differentiate exposure management strategies across risk tiers;  
+- Combine market-based indicators (DD, volatility) with internal measures (EAD, collateral levels) for more comprehensive CCR management.
 
-
+In essence, the risk assessment system transforms CCR measurement from a static compliance task into a **dynamic, data-driven monitoring process**, allowing institutions to respond more effectively to market and credit stress.
