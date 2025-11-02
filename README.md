@@ -22,6 +22,7 @@
   - 4.3 Model Specification  
   - 4.4 Empirical Implementation
   - 4.5 Empirical Results and Discussion
+  - 4.6 Summary of Findings
 
 
 - **Chapter 5 Management Strategies**
