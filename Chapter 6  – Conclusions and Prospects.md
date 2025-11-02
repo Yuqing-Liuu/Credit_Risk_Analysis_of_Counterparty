@@ -12,20 +12,11 @@ The framework demonstrates that properly calibrated market information serves as
 
 ## 6.2 Limitations and Outlook
 
-Although the findings are encouraging, several limitations should be acknowledged.  
-First, the analysis relies on publicly available market data (equity prices, balance-sheet items, and Treasury yields), which may not capture private exposures, off-balance-sheet derivatives, or intraday market dynamics.  
-Future work could incorporate more granular datasets—such as counterparty-level exposure records or transaction-based repo data—to refine model precision.
+Despite the encouraging empirical findings, several limitations warrant acknowledgment. The analysis relies exclusively on publicly available market data—equity prices, financial statement items, and Treasury yields—which may not fully capture private credit exposures, off-balance-sheet derivative positions, or intraday liquidity dynamics. Future research could enhance model precision by incorporating more granular datasets, such as bilateral counterparty exposure records, repo transaction data, or credit default swap spreads.
 
-Second, the **KMV structural assumptions** impose certain simplifications.  
-For instance, the default point is approximated as a weighted sum of short- and long-term debt, while asset values are inferred rather than observed.  
-Alternative structural or reduced-form models, such as the Merton–Jump Diffusion or Copula-based approaches, may capture nonlinear dependence and tail risk more effectively.
+The KMV structural framework also imposes certain modeling simplifications. The default point is approximated as a linear combination of short- and long-term debt, while asset values are inferred through an iterative procedure rather than directly observed. Alternative approaches—such as Merton models with jump-diffusion processes or copula-based frameworks—may better capture tail risk, nonlinear dependencies, and sudden credit events that continuous-time diffusion models underestimate.
+The GARCH(1,1) specification employed in this study, while widely validated, may inadequately represent volatility dynamics during extreme market stress. Extensions using asymmetric GARCH variants (such as EGARCH or GJR-GARCH) or regime-switching models could improve the framework's ability to capture leverage effects, volatility persistence asymmetry, and contagion channels during crisis periods.
 
-Third, the **GARCH(1,1)** specification, though standard, may not fully capture volatility clustering during extreme market events.  
-Future research could extend this framework using asymmetric or regime-switching GARCH models to account for volatility asymmetry and contagion effects.
-
-Finally, while this study focuses on U.S. banks, the model’s applicability could be broadened through **cross-country comparative analysis**.  
-Examining the DD distribution across different regulatory regimes—such as European or Asian markets—would help assess the universality and robustness of the GARCH–KMV approach.
-
-In conclusion, this research provides a methodological and empirical foundation for incorporating market-based models into counterparty credit risk assessment.  
-Further extensions that integrate high-frequency data, advanced volatility structures, and cross-market calibration can contribute to a more adaptive and forward-looking framework for both practitioners and regulators in the evolving landscape of financial risk management.
+The scope of this study is limited to U.S. banking institutions. Extending the analysis to a broader cross-country context—encompassing European, Asian, or emerging market financial systems—would provide valuable insights into how regulatory environments, market structures, and accounting standards affect the performance and calibration of the KMV-GARCH model. Such comparative research would help assess the framework's robustness and adaptability across diverse institutional settings.
+This research establishes a methodological and empirical foundation for integrating market-based structural models into counterparty credit risk assessment. Future extensions incorporating high-frequency data, sophisticated volatility specifications, and multi-jurisdictional calibration can advance the development of more adaptive and forward-looking risk measurement frameworks, benefiting both financial practitioners and regulatory supervisors in an increasingly complex and interconnected financial landscape.
 
