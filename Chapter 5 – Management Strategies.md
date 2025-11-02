@@ -8,17 +8,18 @@ Based on these insights, a structured risk assessment system can be established 
 
 ### 5.1.1 Conceptual Framework
 
-The central idea of the proposed assessment system is to use the **Distance to Default (DD)** as a continuous indicator of solvency.  
-A higher DD implies a stronger financial buffer between a firm’s asset value and its default threshold, while a lower DD indicates a tighter margin of safety and thus higher default risk.  
-This indicator captures the combined effect of leverage and volatility—two of the most important determinants of counterparty risk.
+The core principle underlying the proposed assessment framework is the utilization of Distance to Default (DD) as a continuous, forward-looking measure of counterparty solvency. The DD metric quantifies the magnitude of the financial buffer separating a firm's asset value from its contractual default threshold: a higher DD value signifies substantial financial resilience and ample safety margin, whereas a lower DD indicates heightened vulnerability and elevated default probability.Crucially, DD synthesizes the joint impact of two fundamental drivers of credit risk—capital structure leverage and asset value volatility—thereby providing a parsimonious yet comprehensive assessment of counterparty creditworthiness. This dual sensitivity renders DD particularly valuable for capturing the multidimensional nature of default risk in a single metric.Dynamic Properties and Early Warning FunctionalityThe time-varying nature of DD enables real-time monitoring of credit quality deterioration. Daily fluctuations in DD reflect the responsiveness of a counterparty's financial condition to evolving market dynamics, with particular informational value during periods of market stress. For instance, an abrupt decline in DD coinciding with heightened market volatility may signal material degradation in credit quality, triggering proactive risk management responses such as:
 
-The daily variation in DD reflects how quickly a firm’s credit quality responds to market conditions.  
-For example, a sharp decline in DD during periods of rising volatility may serve as an early warning signal, prompting the institution to review exposure, collateral levels, and credit terms.
+- Immediate reassessment of counterparty exposure and concentration risk;
+- Reevaluation of collateral adequacy and margin requirements;
+- Revision of credit terms, facility limits, or contractual covenants.
+
+By embedding volatility dynamics directly into the solvency measure, the DD-based framework facilitates early detection of credit deterioration before it manifests in traditional lagging indicators such as credit rating downgrades or covenant breaches. This forward-looking capability transforms counterparty risk monitoring from a reactive to a proactive process, enhancing institutional resilience in dynamic market environments.
 
 ### 5.1.2 Quantitative Monitoring System
 
-To make the KMV–GARCH framework operational, financial institutions can implement a **tiered monitoring mechanism** that classifies counterparties according to their DD distribution within a defined sample period.  
-Rather than using arbitrary cutoffs, DD values can be divided into quantile-based groups (e.g., top 25%, middle 50%, bottom 25%) to reflect relative solvency within the market.
+To operationalize the KMV–GARCH framework, financial institutions can adopt a dynamic tiered monitoring mechanism that categorizes counterparties based on their relative position within the DD distribution over a specified observation period.
+Rather than relying on static absolute thresholds, which may become obsolete under changing market conditions, this approach employs quantile-based classification to assess relative creditworthiness within the prevailing market environment. Counterparties are stratified into risk tiers according to their DD percentile rankings (e.g., top 25%, middle 50%, bottom 25%), enabling context-sensitive risk differentiation.
 
 | Quantile Range (of DD) | Credit Risk Level | Recommended Action |
 |------------------------|-------------------|--------------------|
@@ -26,19 +27,23 @@ Rather than using arbitrary cutoffs, DD values can be divided into quantile-base
 | Middle 50%             | Moderate risk | Review exposure concentration; increase frequency of reporting |
 | Bottom 25% (lowest DD) | Elevated risk | Reassess counterparty creditworthiness; adjust limits and collateral requirements |
 
-This relative approach avoids the bias of fixed thresholds and allows risk managers to adapt the classification dynamically as market volatility changes.
+This relative classification methodology offers several operational advantages:
+
+Market adaptability: Risk thresholds automatically adjust to prevailing market volatility regimes, avoiding the rigidity of fixed cutoffs that may become miscalibrated during stressed or tranquil periods.
+Cross-sectional comparability: By ranking counterparties within a common distribution, the framework facilitates meaningful peer comparison and portfolio-level risk assessment.
+Reduced false positives: The relative approach mitigates the risk of excessive alerts during market-wide stress events, when absolute DD values may decline uniformly across all counterparties.
+
+This dynamic tiering mechanism thus enables risk managers to translate quantitative DD metrics into actionable, context-aware credit decisions that remain robust across diverse market conditions.
 
 ### 5.1.3 Early Warning and Decision Integration
 
-The assessment system should be embedded into the institution’s daily credit control process.  
-When DD falls below a predefined percentile or drops sharply within a short time window, the system triggers an **early-warning alert**.  
-Such alerts can automatically link to internal workflows—for instance:
+The assessment system should be seamlessly integrated into the institution's daily credit monitoring and control infrastructure. When the Distance-to-Default (DD) metric breaches a predetermined threshold percentile or exhibits sharp deterioration within a defined time window, the system automatically generates early-warning signals. These alerts should be configured to interface directly with internal risk management workflows, enabling timely and targeted interventions such as:
 
-- Notifying credit officers to conduct a counterparty review;  
-- Re-estimating exposure at default (EAD) and potential future exposure (PFE);  
-- Adjusting collateral requirements or hedging positions.  
+Triggering mandatory counterparty credit reviews by designated credit officers;
+Prompting recalibration of exposure metrics, including Exposure at Default (EAD) and Potential Future Exposure (PFE);
+Initiating adjustments to collateral arrangements or dynamic hedging strategies.
 
-This integration ensures that market-based risk signals translate directly into practical management actions rather than remaining as theoretical indicators.
+Such systematic integration ensures that market-implied risk signals are operationalized into concrete management actions, thereby bridging the gap between quantitative risk indicators and practical decision-making processes. This approach transforms the DD metric from a passive monitoring tool into an active component of proactive credit risk mitigation.
 
 ### 5.1.4 Advantages and Practical Implications
 
