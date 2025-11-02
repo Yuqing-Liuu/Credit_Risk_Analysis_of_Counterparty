@@ -236,7 +236,7 @@ $$
 EDF_t = \Phi(-DD_t),
 $$
 
-where \( \Phi(\cdot) \) denotes the cumulative distribution function of the standard normal distribution. For large, well-capitalized financial institutions, DD often exceeds 8–10, resulting in EDF values close to zero due to numerical precision limits. Consequently, the analysis primarily focuses on DD as the principal indicator of credit quality and solvency.
+where \( \Phi(\cdot) \) denotes the cumulative distribution function of the standard normal distribution. For large, well-capitalized financial institutions, resulting in EDF values close to zero due to numerical precision limits. Consequently, the analysis primarily focuses on DD as the principal indicator of credit quality and solvency.
 
 ### 4.4.6 Implementation Summary
 
@@ -303,22 +303,20 @@ Overall, the empirical evidence demonstrates that integrating market-based volat
 
 ## 4.6 Summary of Findings
 
-The empirical findings can be summarized as follows:
+This chapter has applied the GARCH–KMV model to empirically evaluate counterparty credit risk among ten major U.S. banking institutions over the period 2018–2024. The results provide several insights into the solvency dynamics of the U.S. banking system and the effectiveness of market-based structural models in assessing credit risk.
 
-1. **High solvency across all institutions.**  
-   DD values above 100 indicate extreme financial stability; EDFs are effectively zero.  
+First, the estimated distance to default (DD) values reveal a consistently high level of solvency across all institutions. The DD values for the sample banks range between 110 and 160, indicating that the market value of assets remains substantially higher than the estimated default thresholds. These magnitudes imply that the probability of default, expressed through the expected default frequency (EDF), is virtually zero for all banks during the sample period. This outcome is consistent with the high capitalization levels of the U.S. banking sector and reflects a generally stable macro-financial environment following the post-crisis reforms introduced under Basel III.
 
-2. **Negative link between volatility and DD.**  
-   Higher market volatility increases default sensitivity, as predicted by the KMV model.  
+Second, the cross-sectional comparison of institutions shows that the GARCH–KMV model effectively differentiates between varying degrees of solvency. Large, systemically important banks such as JPMorgan Chase and PNC Financial exhibit the highest DD values, reflecting strong capital buffers and lower risk exposure. In contrast, regional banks including M&T Bank and Truist Financial display slightly lower DD values, suggesting higher sensitivity to market fluctuations. Despite these differences, all banks maintain solvency margins that are well above critical thresholds, reinforcing the robustness of the U.S. financial system.
 
-3. **Dynamic responsiveness to market stress.**  
-   DD temporarily declined during 2020 but recovered rapidly, demonstrating resilience.  
+Third, the analysis of volatility and leverage demonstrates that solvency is inversely related to market volatility and debt exposure. Higher volatility, as captured by the GARCH(1,1) process, reduces DD by increasing the uncertainty surrounding asset values. Similarly, higher leverage lowers DD by tightening the gap between assets and liabilities. These findings are consistent with the theoretical predictions of the structural credit-risk model and confirm that both market-based and accounting-based variables jointly determine creditworthiness. The integration of GARCH volatility into the KMV structure successfully captures the dynamic adjustment of solvency in response to market shocks.
 
-4. **Consistency with Basel III framework.**  
-   Market-based DD estimates align with capital adequacy principles, offering a complementary tool for supervisory stress testing.
+Fourth, the empirical results align closely with the Basel III regulatory capital framework. The high DD values observed for all banks correspond to market-implied capital buffers that far exceed the minimum Tier 1 capital ratio requirement of 8.5 percent. Although the KMV-based solvency measure is market-driven and may fluctuate with changes in investor sentiment, it complements the regulatory perspective by providing a continuous and forward-looking assessment of credit risk. The GARCH–KMV model therefore serves as a valuable analytical tool for evaluating counterparty exposure in real time and for bridging the gap between regulatory capital measures and market-implied risk indicators.
 
-In conclusion, the **GARCH–KMV framework** provides a powerful analytical lens for evaluating counterparty credit risk at the institutional level.  
-By integrating time-varying volatility into the structural credit-risk model, it captures both cross-sectional solvency differences and dynamic responses to financial shocks, supporting its use in modern CCR analysis.
+Finally, the results highlight the stability and resilience of the U.S. banking sector during the period under study, including the COVID-19 shock of 2020. The temporary increase in volatility and corresponding decline in DD during the pandemic were followed by a rapid recovery, demonstrating that market-based solvency indicators respond dynamically to macroeconomic stress and normalization. This responsiveness underscores the practical utility of the GARCH–KMV model for monitoring risk evolution over time.
+
+In conclusion, the empirical analysis confirms that integrating time-varying volatility into the structural framework provides a coherent and robust method for assessing counterparty credit risk. The GARCH–KMV approach not only yields theoretically consistent measures of solvency but also offers practical insights for financial stability assessment and capital adequacy evaluation under Basel III. The next chapter will synthesize these empirical findings with the theoretical and methodological discussions presented earlier to draw broader implications for risk management and policy design.
+
 
 ---
 
