@@ -140,17 +140,16 @@ Basel III introduces the Standardized Approach for Counterparty Credit Risk (SA-
 
 ### 5.3.3 Supervisory Monitoring and Systemic Risk Indicators
 
-From a macroprudential perspective, the aggregate DD distribution across institutions can serve as a **systemic solvency indicator**.  
-A sudden decline in the sector-wide median DD, or a significant increase in its dispersion, may signal rising stress in the banking system.  
-Regulators could use these indicators alongside existing macro-stress testing frameworks to identify contagion channels and concentration risks.
+From a macroprudential perspective, the aggregate distribution of DD values across financial institutions serves as a valuable systemic solvency indicator. A sudden compression in the sector-wide median DD, or a pronounced widening of its dispersion, may signal escalating stress within the banking system and deteriorating credit conditions across multiple institutions. Regulators can integrate these market-based signals with existing macro-stress testing frameworks to identify potential contagion channels, sectoral concentration risks, and interconnectedness vulnerabilities that threaten financial stability.
+Supervisory Dashboard for Systemic Risk Assessment
+In operational terms, supervisory authorities could establish a real-time monitoring dashboard incorporating the following key metrics:
 
-In practice, supervisory authorities could implement a monitoring dashboard based on the following metrics:
+- Cross-sectional DD statistics: Mean, median, and variance of DD values among systemically important institutions, tracking shifts in the central tendency and dispersion of solvency buffers;
+- Interbank DD correlation dynamics: Measures of co-movement in DD trajectories across counterparties, revealing hidden linkages and common risk exposures;
+- Market volatility evolution: The rate of change in implied asset volatility derived from the GARCH component, capturing aggregate uncertainty and stress intensity.
 
-- The cross-sectional mean and variance of DD among major banks;  
-- The correlation of DD dynamics across counterparties;  
-- The rate of change in market volatility inferred from the GARCH component.  
-
-Such metrics would provide early evidence of liquidity stress or heightened counterparty interdependence, enabling pre-emptive policy measures such as targeted capital surcharges or enhanced collateral requirements.
+These indicators collectively provide early-warning signals of liquidity pressures, heightened counterparty interdependence, or market-wide credit deterioration. Crucially, the forward-looking nature of these metrics enables pre-emptive regulatory intervention—such as imposing targeted capital surcharges on vulnerable institutions, tightening collateral requirements for concentrated exposures, or activating countercyclical capital buffers—before vulnerabilities crystallize into systemic crises.
+By embedding market-based solvency measures into macroprudential surveillance frameworks, regulators can enhance their ability to detect and mitigate systemic risks in a timely and targeted manner, complementing traditional supervisory tools with real-time market intelligence.
 
 ### 5.3.4 Implementation and Challenges
 
