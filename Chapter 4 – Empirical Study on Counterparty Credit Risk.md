@@ -242,6 +242,9 @@ The analysis focuses on the estimation of the distance to default (DD) for ten m
 
 <img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  
 <img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" /> 
+<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/f17feefb-22a9-4d0a-bb31-cc55b1d0c4c4" />
+
+
 
 Figures presents the cross-sectional distribution of distance to default (DD) across the ten sample institutions as of the final observation date, alongside the relationship between equity volatility and solvency margins. The upper panel reveals considerable dispersion in DD values, ranging from approximately 110 for M&T Bank to 160 for JPMorgan Chase. This 45% spread, while occurring at uniformly high absolute levels, reflects meaningful differences in market-perceived creditworthiness among institutions.
 JPMorgan Chase and PNC Financial emerge as the most solvent institutions by this metric, consistent with their status as diversified, systemically important banks with substantial capital buffers and stable earnings profiles. Bank of America and Capital One Financial occupy the upper-middle tier, while regional banks such as Truist Financial, U.S. Bank, and M&T Bank cluster toward the lower end of the distribution. Notably, even the institution with the lowest DD—M&T Bank at 110—maintains a solvency margin that implies negligible default probability under any realistic scenario.
