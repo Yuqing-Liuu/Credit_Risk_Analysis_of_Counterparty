@@ -240,9 +240,10 @@ The analysis focuses on the estimation of the distance to default (DD) for ten m
 
 ### 4.5.1 Distance to Default Across Institutions
 
-<img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  Firgire4.1
+<img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  
+<img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" /> 
 
-Figure 4.1 presents the ranking of **Distance to Default (DD)** on the last sample day. All banks display large solvency buffers, with DD values ranging between approximately 110 and 160. This implies that market-implied firm values are far above their respective default points, confirming overall solvency stability within the U.S. banking sector.
+Figure presents the ranking of **Distance to Default (DD)** on the last sample day. All banks display large solvency buffers, with DD values ranging between approximately 110 and 160. This implies that market-implied firm values are far above their respective default points, confirming overall solvency stability within the U.S. banking sector.
 
 The ranking pattern aligns with expectations:
 
@@ -263,8 +264,6 @@ The observed pattern also reveals a nonlinear effect: the marginal impact of vol
 From a risk management perspective, these results underscore two key insights. First, while all institutions maintain comfortable solvency margins, the cross-sectional ranking provides a meaningful hierarchy for counterparty risk assessment. JPM and PNC would represent lower-risk counterparties relative to regional banks, all else equal. Second, the volatility-DD relationship highlights the importance of incorporating time-varying risk dynamics: institutions with historically stable equity volatility may experience sharper deteriorations in creditworthiness during stress episodes when volatility spikes unexpectedly.
 
 ### 4.5.2 Sensitivity to Leverage and Volatility
-
-<img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" />  Firgire4.2
 
 Figure 4.2 plots **equity volatility** \( \sigma_E \) against **Distance to Default**. The relationship is clearly **negative**, confirming the theoretical expectation that higher volatility corresponds to lower solvency margins.
 
