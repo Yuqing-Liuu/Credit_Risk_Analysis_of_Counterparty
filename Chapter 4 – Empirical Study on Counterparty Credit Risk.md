@@ -150,13 +150,13 @@ reflecting the annualized standard deviation of daily residuals. This dynamic vo
 
 ### 4.3.3 Integration of GARCH and KMV Models
 
-The integration of the GARCH and KMV frameworks allows the model to incorporate both firm fundamentals and market-driven dynamics. In this combined structure, the GARCH model captures short-term fluctuations in equity volatility, while the KMV model translates this information into credit-risk metrics such as DD and EDF. The iterative estimation proceeds as follows:
+The integration of the GARCH and KMV frameworks allows the model to incorporate both firm fundamentals and market-driven dynamics. In this combined structure, the GARCH model captures short-term fluctuations in equity volatility, while the KMV model translates this information into credit-risk metrics such as DD. The iterative estimation proceeds as follows:
 
 1. Estimate daily equity volatility \( \sigma_E \) from the GARCH(1,1) model.  
 2. Use market capitalization \( E_t \), equity volatility \( \sigma_E \), risk-free rate \( r_t \), and the default point \( D_P \) to solve the KMV system for \( V_A \) and \( \sigma_A \).  
-3. Compute DD and EDF using the standard KMV formulations.  
+3. Compute DD using the standard KMV formulations.  
 
-This approach produces a sequence of daily DD and EDF estimates that capture both firm-specific risk and systemic market volatility. The dynamic nature of this model makes it suitable for analyzing time-varying solvency and for stress-testing purposes in counterparty credit-risk management. Moreover, it enables an empirical comparison of market-implied solvency measures with regulatory capital standards such as those defined under Basel III (Basel Committee 2011).
+This approach produces a sequence of daily DD estimates that capture both firm-specific risk and systemic market volatility. The dynamic nature of this model makes it suitable for analyzing time-varying solvency and for stress-testing purposes in counterparty credit-risk management. Moreover, it enables an empirical comparison of market-implied solvency measures with regulatory capital standards such as those defined under Basel III (Basel Committee 2011).
 
 The model specification unifies structural and econometric methodologies. The KMV model provides the theoretical foundation linking firm assets and liabilities, while the GARCH process supplies the dynamic component necessary to reflect evolving market volatility. Together, they form a coherent analytical framework for the empirical measurement of counterparty credit risk.
 
@@ -164,57 +164,92 @@ The model specification unifies structural and econometric methodologies. The KM
 
 ## 4.4 Empirical Implementation
 
+This section explains how the GARCH–KMV model described in the previous section is implemented empirically. The implementation involves transforming the theoretical model into estimable quantities using the market and accounting data introduced in Section 4.2. The process consists of four main stages: data preparation, parameter estimation, default point construction, and computation of distance to default (DD) and expected default frequency (EDF).
+
 ### 4.4.1 Data Processing and Variable Construction
 
-Daily closing prices were transformed into continuously compounded returns:
+The empirical analysis uses daily closing prices for each bank from January 2018 to December 2024. The continuously compounded daily returns are calculated according to
 
 $$
-r_t = \ln\left(\frac{P_t}{P_{t-1}}\right)
+r_t = \ln\left(\frac{P_t}{P_{t-1}}\right),
 $$
 
-For each firm, a one-year rolling window was used to estimate equity volatility from the GARCH model.  
-The **risk-free rate** \(r_t\) was extracted from daily U.S. Treasury yields (1-year maturity).  
-All financial quantities are expressed in consistent USD values.
-
-The **default point (D\_P)** for each firm is constructed as:
+where \( P_t \) denotes the adjusted closing price on day \( t \). Outliers in return series are winsorized at the 1st and 99th percentiles to reduce the influence of extreme market movements. The cleaned return series is then used to estimate conditional volatility through the GARCH(1,1) model defined in Section 4.3.2. The conditional variance \( \sigma_t^2 \) obtained from the GARCH process represents daily equity volatility and is subsequently annualized as
 
 $$
-D_P = \text{Short-term Debt (STD)} + 0.5 \times \text{Long-term Debt (LTD)}
+\sigma_E = \sqrt{252} \times \text{std}(\epsilon_t),
 $$
 
-When short-term debt data were unavailable, it was proxied using:
+where \( \epsilon_t \) are residuals from the conditional mean equation.
+
+Firm-level accounting variables, including total liabilities and long-term debt, are aligned with the same observation period. As balance-sheet data are reported annually, linear interpolation is applied to generate daily frequency series, ensuring consistency between market and accounting data. All variables are expressed in U.S. dollars and converted to logarithmic form where appropriate to mitigate heteroskedasticity.
+
+### 4.4.2 Estimation of Model Parameters
+
+The GARCH(1,1) parameters \( \omega \), \( \alpha \), and \( \beta \) are estimated using maximum likelihood. The model is fitted to each firm’s daily return series, and diagnostic tests are performed to confirm the absence of serial correlation in standardized residuals. The estimated conditional volatility \( \sigma_t \) provides a time-varying measure of market uncertainty and serves as input for the KMV model.
+
+The risk-free rate \( r_t \) is taken as the continuously compounded one-year Treasury yield retrieved from the FRED database. Since Treasury yields are reported at daily frequency, no further transformation is required. The time horizon \( T \) is set to one year, consistent with both Basel regulatory convention and the KMV default horizon.
+
+### 4.4.3 Construction of the Default Point
+
+The default point \( D_P \) represents the total debt level that triggers insolvency and is defined as
 
 $$
-\text{STD} \approx \max(\text{Total Liabilities} - \text{LTD}, 0) \times 0.2
+D_P = \text{STD} + 0.5 \times \text{LTD},
 $$
 
-This proxy maintains proportionality between short- and long-term debt structures across institutions *(Gregory 2015)*.
+where STD and LTD denote short-term and long-term debt, respectively. This definition follows the recommendation of Pykhtin and Zhu (2006) and reflects the assumption that short-term liabilities are immediately due upon default, while long-term obligations contribute partially to the default trigger.
 
----
-
-### 4.4.2 Calculation of Distance to Default (DD)
-
-The iterative KMV inversion is used to solve for asset value \(V_A\) and volatility \(\sigma_A\) consistent with observed equity value \(E\) and volatility \(\sigma_E\).  
-For each trading day \(t\), DD is calculated as:
+In cases where short-term debt data are missing, a proxy is employed following Gregory (2015):
 
 $$
-DD_t = \frac{\ln(V_A / D_P) + (r_t - 0.5\sigma_A^2)T}{\sigma_A\sqrt{T}}
+\text{STD} \approx \max(\text{Total Liabilities} - \text{LTD}, 0) \times 0.2.
 $$
 
-Daily DD values are averaged to obtain annualized metrics for each institution.
+This approximation assumes that approximately 20 percent of non-long-term liabilities are short-term in nature. Although simplified, this method maintains a realistic proportion between short-term and long-term debt for large financial institutions. The total default point is recalculated annually for each firm using the most recent financial statements, and the interpolated series is synchronized with the daily market data.
 
----
+### 4.4.4 Solving for Asset Value and Volatility
 
-### 4.4.3 Derivation of Expected Default Frequency (EDF)
-
-The EDF is derived from the cumulative normal probability of default:
+For each firm and each trading day, the asset value \( V_A \) and asset volatility \( \sigma_A \) are inferred by solving the following system of equations derived from the KMV model:
 
 $$
-EDF_t = \Phi(-DD_t)
+E = V_A N(d_1) - D_P e^{-rT} N(d_2),
 $$
 
-In practice, large DD values (above 8–10) produce EDF values below machine precision (≈ 10⁻¹⁰), resulting in EDF ≈ 0 for all institutions.  
-Hence, DD is the primary variable of interest for cross-sectional comparison *(Basel Committee 2011)*.
+$$
+\sigma_E = \frac{V_A N(d_1)}{E} \sigma_A,
+$$
+
+where \( E \) is market capitalization and \( \sigma_E \) is the observed equity volatility obtained from the GARCH(1,1) model. These equations are solved iteratively using a numerical optimization procedure until convergence is achieved. The solutions \( V_A \) and \( \sigma_A \) are then substituted into the KMV expression for distance to default.
+
+### 4.4.5 Computation of Distance to Default and EDF
+
+Once \( V_A \) and \( \sigma_A \) are obtained, the distance to default for each firm on day \( t \) is calculated as
+
+$$
+DD_t = \frac{\ln(V_A / D_P) + (r_t - 0.5 \sigma_A^2) T}{\sigma_A \sqrt{T}}.
+$$
+
+The DD measures the number of standard deviations by which a firm’s asset value exceeds its default barrier. A higher DD implies greater solvency and lower default probability. The corresponding expected default frequency is calculated as
+
+$$
+EDF_t = \Phi(-DD_t),
+$$
+
+where \( \Phi(\cdot) \) denotes the cumulative distribution function of the standard normal distribution. For large, well-capitalized financial institutions, DD often exceeds 8–10, resulting in EDF values close to zero due to numerical precision limits. Consequently, the analysis primarily focuses on DD as the principal indicator of credit quality and solvency.
+
+### 4.4.6 Implementation Summary
+
+The empirical procedure can be summarized in the following steps:
+
+1. Collect daily stock price data and compute log returns for each firm.
+2. Estimate time-varying equity volatility using the GARCH(1,1) model.
+3. Construct the default point using available accounting data.
+4. Solve the KMV system to obtain asset value and asset volatility.
+5. Calculate daily DD and EDF for each institution.
+
+The resulting dataset contains a time series of DD and EDF values for each bank over the 2018–2024 period. These indicators are then used in Section 4.5 to analyze solvency dynamics and to assess the implications for counterparty credit risk under the Basel III capital framework.
+
 
 ---
 
