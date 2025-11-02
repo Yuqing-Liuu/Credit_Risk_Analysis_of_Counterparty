@@ -4,7 +4,7 @@
 
 ## 4.1 Overview
 
-We applies the GARCH–KMV framework to quantify counterparty credit risk (CCR) among major U.S. banking institutions over the 2018–2024 period. The methodology integrates market-derived equity volatility with balance sheet fundamentals to construct firm-specific measures of Distance to Default (DD) and Expected Default Frequency (EDF).
+We has applied the GARCH–KMV framework to quantify counterparty credit risk (CCR) among major U.S. banking institutions over the 2018–2024 period. The methodology integrates market-derived equity volatility with balance sheet fundamentals to construct firm-specific measures of Distance to Default (DD) and Expected Default Frequency (EDF).
 
 The empirical investigation pursues three primary objectives. First, it operationalizes the KMV structural credit risk model while incorporating GARCH-based conditional volatility estimates to account for time-varying market risk dynamics. Second, it derives institutional default probabilities through the estimation of each bank's distance to the default threshold. Third, it examines the implications of these risk measures for regulatory capital requirements under the Basel III accords.
 
@@ -240,15 +240,21 @@ The analysis focuses on the estimation of the distance to default (DD) for ten m
 
 ### 4.5.1 Distance to Default Across Institutions
 
-The estimated distance to default (DD) values, ranging between 110 and 160 across all sample institutions, indicate exceptionally large solvency margins throughout the observation period. While these magnitudes appear extreme relative to conventional thresholds cited in earlier literature (e.g., Bharath and Shumway, 2008; Vassalou and Xing, 2004), they reflect three institutional features specific to this analysis.
-These DD estimates correspond to expected default frequencies effectively indistinguishable from zero—ranging from 10^-36 to 10^-112—which, while statistically negligible, should be interpreted as indicating extremely remote rather than literally impossible default probabilities. The cross-sectional variation in DD values nonetheless remains economically meaningful for relative risk assessment among institutions.
+<img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  Firgire4.1
 
-<img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />
+Figure 4.1 presents the ranking of **Distance to Default (DD)** on the last sample day. All banks display large solvency buffers, with DD values ranging between approximately 110 and 160. This implies that market-implied firm values are far above their respective default points, confirming overall solvency stability within the U.S. banking sector.
+
+The ranking pattern aligns with expectations:
+
+- **Top-tier global banks** (e.g., JPMorgan Chase, PNC, Bank of America) occupy the upper end (DD ≈ 145–160), reflecting stronger capitalization, diversified portfolios, and access to stable funding.
+- **Regional banks** (e.g., M&T Bank, Truist Financial) show lower DD values (≈110–120), consistent with smaller balance sheets and higher exposure to localized risks.
+
+Two insights emerge from Figure 4.1.  
+First, the DD dispersion is **persistent** across time, suggesting that solvency rankings reflect structural factors—business model, funding mix, and governance—rather than short-lived market noise.  
+Second, moderate variation of the parameter \( \alpha \) (between 0.3 and 0.7) changes the DD level but not the relative ranking, confirming the robustness of these findings.
 
 
-<img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" />
-
-<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/d7ba79bf-c884-48a2-8322-94442227d098" />
+<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/d7ba79bf-c884-48a2-8322-94442227d098" /> Firgire4.3
 
 Figures presents the cross-sectional distribution of distance to default (DD) across the ten sample institutions as of the final observation date, alongside the relationship between equity volatility and solvency margins. The upper panel reveals considerable dispersion in DD values, ranging from approximately 110 for M&T Bank to 160 for JPMorgan Chase. This 45% spread, while occurring at uniformly high absolute levels, reflects meaningful differences in market-perceived creditworthiness among institutions.
 JPMorgan Chase and PNC Financial emerge as the most solvent institutions by this metric, consistent with their status as diversified, systemically important banks with substantial capital buffers and stable earnings profiles. Bank of America and Capital One Financial occupy the upper-middle tier, while regional banks such as Truist Financial, U.S. Bank, and M&T Bank cluster toward the lower end of the distribution. Notably, even the institution with the lowest DD—M&T Bank at 110—maintains a solvency margin that implies negligible default probability under any realistic scenario.
@@ -257,6 +263,15 @@ The observed pattern also reveals a nonlinear effect: the marginal impact of vol
 From a risk management perspective, these results underscore two key insights. First, while all institutions maintain comfortable solvency margins, the cross-sectional ranking provides a meaningful hierarchy for counterparty risk assessment. JPM and PNC would represent lower-risk counterparties relative to regional banks, all else equal. Second, the volatility-DD relationship highlights the importance of incorporating time-varying risk dynamics: institutions with historically stable equity volatility may experience sharper deteriorations in creditworthiness during stress episodes when volatility spikes unexpectedly.
 
 ### 4.5.2 Sensitivity to Leverage and Volatility
+
+<img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" />  Firgire4.2
+
+Figure 4.2 plots **equity volatility** \( \sigma_E \) against **Distance to Default**. The relationship is clearly **negative**, confirming the theoretical expectation that higher volatility corresponds to lower solvency margins.
+
+- In our sample, \( \sigma_E \) ranges roughly from 0.22 to 0.30 (annualized). Moving from the low-volatility to the high-volatility group corresponds to a material decline in DD.
+- The GARCH(1,1) process captures volatility spikes, such as the early-2020 COVID-19 episode, during which the model records a temporary compression of DD, followed by recovery as volatility normalizes.
+
+The leverage channel operates through the default-point term. Holding volatility fixed, a higher **total liability ratio** increases \( DP_t \), thus reducing \( \ln(V_t/DP_t) \) and DD. Banks with heavier reliance on short-term or wholesale funding exhibit lower DD, consistent with the structural model intuition.
 
 A central feature of the GARCH–KMV framework is its ability to link solvency measures to both balance-sheet fundamentals and market-based volatility. To examine this relationship, the annualized equity volatility estimated from the GARCH(1,1) process is compared with the DD obtained from the KMV model. The analysis reveals a clear inverse relationship: institutions exhibiting higher equity volatility tend to have smaller distances to default. 
 
