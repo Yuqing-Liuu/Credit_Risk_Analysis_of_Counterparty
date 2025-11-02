@@ -2,23 +2,11 @@
 
 ## 6.1 Conclusions
 
-This study developed an integrated framework for assessing counterparty credit risk (CCR) based on the GARCH–KMV model, combining market-based volatility dynamics with structural default modeling.  
-By applying the framework to a representative sample of major U.S. banks over the 2018–2024 period, the analysis produced several meaningful conclusions.
-
-First, the empirical findings demonstrate that the **Distance to Default (DD)** effectively captures differences in solvency across institutions.  
-Banks with higher capitalization and lower equity volatility—such as JPMorgan Chase and PNC—showed greater resilience, while smaller or more leveraged institutions exhibited narrower safety buffers.  
-This highlights DD’s value as a real-time indicator of financial stability, bridging the gap between traditional accounting metrics and market-based assessments.
-
-Second, the results confirm the strong **inverse relationship between equity volatility and DD**.  
-Institutions with elevated market volatility tend to have shorter distances to default, indicating that changes in investor sentiment and market uncertainty directly translate into higher counterparty risk.  
-This relationship underscores the importance of incorporating dynamic volatility modeling (via GARCH processes) into CCR measurement frameworks.
-
-Third, from a management perspective, the study shows that the KMV-based metrics can be operationalized to enhance **internal risk control** and **regulatory monitoring**.  
-Through quantile-based classification, counterparty exposures can be prioritized and adjusted dynamically, aligning internal risk limits with real-time market information.  
-Moreover, the DD distribution provides a systemic view of sectoral solvency that can inform supervisory early-warning systems under Basel III.
-
-Overall, the GARCH–KMV model demonstrates that market information—when properly structured and calibrated—can serve as a reliable complement to traditional credit analysis and regulatory capital measurement.  
-It enables both micro-level (institutional) and macro-level (systemic) insights, contributing to a more responsive and data-driven approach to counterparty credit risk management.
+This study developed an integrated framework for counterparty credit risk assessment by combining the KMV structural model with GARCH-based volatility dynamics. Applying this framework to major U.S. financial institutions over the 2018–2024 period yielded several significant findings.
+The empirical results confirm that Distance to Default effectively differentiates solvency positions across institutions. Well-capitalized banks with lower equity volatility—such as JPMorgan Chase and PNC Financial—consistently exhibited higher DD values and greater financial resilience, while smaller or more leveraged counterparties displayed narrower safety margins. This validates DD as a real-time, market-responsive indicator that bridges traditional balance-sheet metrics and forward-looking market assessments.
+The analysis also demonstrates a robust inverse relationship between equity volatility and DD. Elevated market volatility directly compresses default distances, reflecting heightened uncertainty regarding asset values. This finding underscores the importance of embedding dynamic volatility processes into CCR measurement frameworks to capture time-varying risk that static models overlook.
+From a practical perspective, the KMV-GARCH metrics can be operationalized within institutional risk management infrastructures. The proposed quantile-based classification system enables dynamic adjustment of counterparty exposures, aligning internal risk limits with continuously updating market signals. Portfolio-level DD distributions also provide supervisory authorities with systemic perspectives on sectoral solvency, supporting early-warning mechanisms under Basel III.
+The framework demonstrates that properly calibrated market information serves as a valuable complement to traditional credit analysis and regulatory capital measurement. By providing both institution-specific and systemic risk insights, the model contributes to a more responsive and empirically grounded approach to counterparty credit risk management in modern financial institutions.
 
 ## 6.2 Limitations and Outlook
 
