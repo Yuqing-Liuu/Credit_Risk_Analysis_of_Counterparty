@@ -251,11 +251,6 @@ From a risk management perspective, these results underscore two key insights. F
 
 ### 4.5.2 Sensitivity to Leverage and Volatility
 
-- In our sample, \( \sigma_E \) ranges roughly from 0.22 to 0.30 (annualized). Moving from the low-volatility to the high-volatility group corresponds to a material decline in DD.
-- The GARCH(1,1) process captures volatility spikes, during which the model records a temporary compression of DD, followed by recovery as volatility normalizes.
-
-The leverage channel operates through the default-point term. Holding volatility fixed, a higher **total liability ratio** increases \( DP_t \), thus reducing \( \ln(V_t/DP_t) \) and DD. Banks with heavier reliance on short-term or wholesale funding exhibit lower DD, consistent with the structural model intuition.
-
 A central feature of the GARCH–KMV framework is its ability to link solvency measures to both balance-sheet fundamentals and market-based volatility. To examine this relationship, the annualized equity volatility estimated from the GARCH(1,1) process is compared with the DD obtained from the KMV model. The analysis reveals a clear inverse relationship: institutions exhibiting higher equity volatility tend to have smaller distances to default. 
 
 This negative association reflects the theoretical prediction that increased market uncertainty compresses solvency margins by raising the probability that asset values could approach the default barrier. For instance, large banks such as JPMorgan Chase and PNC Financial, which display relatively low volatility (around 0.22), correspondingly exhibit high DD values above 150. In contrast, institutions such as M&T Bank and Fifth Third Bank, with volatilities near 0.28–0.30, show DD values closer to 110–120. 
