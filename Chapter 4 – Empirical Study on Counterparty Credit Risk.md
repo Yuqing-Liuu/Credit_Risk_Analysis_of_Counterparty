@@ -242,7 +242,6 @@ The analysis focuses on the estimation of the distance to default (DD) for ten m
 
 <img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />  
 <img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" /> 
-<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/f17feefb-22a9-4d0a-bb31-cc55b1d0c4c4" />
 
 
 
@@ -255,6 +254,8 @@ From a risk management perspective, these results underscore two key insights. F
 ### 4.5.2 Sensitivity to Leverage and Volatility
 
 A central feature of the GARCH–KMV framework is its ability to link solvency measures to both balance-sheet fundamentals and market-based volatility. To examine this relationship, the annualized equity volatility estimated from the GARCH(1,1) process is compared with the DD obtained from the KMV model. The analysis reveals a clear inverse relationship: institutions exhibiting higher equity volatility tend to have smaller distances to default. 
+
+<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/f17feefb-22a9-4d0a-bb31-cc55b1d0c4c4" />
 
 This negative association reflects the theoretical prediction that increased market uncertainty compresses solvency margins by raising the probability that asset values could approach the default barrier. For instance, large banks such as JPMorgan Chase and PNC Financial, which display relatively low volatility (around 0.22), correspondingly exhibit high DD values above 150. In contrast, institutions such as M&T Bank and Fifth Third Bank, with volatilities near 0.28–0.30, show DD values closer to 110–120. 
 
