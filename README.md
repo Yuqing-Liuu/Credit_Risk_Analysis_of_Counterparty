@@ -17,10 +17,13 @@
   - 3.3 Central Counterparty Credit Risk  
 
 - **Chapter 4 Empirical Analysis of Counterparty Credit Risk**
-  - 4.1 Variable Selection  
-  - 4.2 Model Parameters  
-  - 4.3 Empirical Results  
-  - 4.4 Summary  
+  - 4.1 Overview  
+  - 4.2 Data Description
+  - 4.3 Model Specification  
+  - 4.4 Empirical Implementation
+  - 4.4 Empirical Implementation
+  - 4.5 Empirical Results and Discussion
+
 
 - **Chapter 5 Management Strategies**
   - 5.1 Risk Assessment System  
