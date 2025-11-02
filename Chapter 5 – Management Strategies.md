@@ -56,4 +56,68 @@ From a practical standpoint, this system allows banks to:
 - Differentiate exposure management strategies across risk tiers;  
 - Combine market-based indicators (DD, volatility) with internal measures (EAD, collateral levels) for more comprehensive CCR management.
 
-In essence, the risk assessment system transforms CCR measurement from a static compliance task into a **dynamic, data-driven monitoring process**, allowing institutions to respond more effectively to market and credit stress.
+In essence, the risk assessment system transforms CCR measurement from a static compliance task into a dynamic, data-driven monitoring process, allowing institutions to respond more effectively to market and credit stress.
+
+
+## 5.2 Internal Risk Management
+
+While the quantitative assessment system outlined in Section 5.1 provides a foundation for identifying and classifying counterparty credit risk (CCR), effective management also depends on how institutions **interpret, integrate, and act upon** these signals.  
+Internal risk management mechanisms transform statistical outputs—such as Distance to Default (DD) and volatility measures—into actionable strategies that directly influence capital allocation, exposure limits, and credit decisions.
+
+### 5.2.1 Integration of Model Outputs into Credit Processes
+
+The first step in internal management is to embed model-derived indicators within the bank’s existing credit workflow.  
+The daily monitoring of DD and equity volatility can serve as a **quantitative complement** to traditional qualitative credit reviews.  
+Specifically, institutions may incorporate the following practices:
+
+- **Credit Review Enhancement:**  
+  When a counterparty’s DD declines sharply or falls into the lowest quartile, the risk control team initiates a targeted review that examines leverage, liquidity, and collateral sufficiency.  
+  The review outcome determines whether to maintain, reduce, or terminate trading exposure.
+
+- **Dynamic Limit Adjustment:**  
+  Exposure limits are no longer fixed by static credit grades but are adjusted proportionally to DD or z-score movements.  
+  For example, a 10% reduction in DD over one quarter may trigger a 15–20% decrease in counterparty limits.
+
+- **Collateral Policy Linkage:**  
+  The model results are also integrated into collateral management.  
+  Counterparties showing elevated risk are subject to higher initial margins, stricter haircuts, or more frequent margin calls.
+
+### 5.2.2 Portfolio-Level Risk Aggregation
+
+Individual counterparty risk must be aggregated at the portfolio level to evaluate systemic vulnerabilities.  
+By aggregating DD and volatility measures across all counterparties, the institution can identify concentrations of exposure to specific sectors or markets.  
+A portfolio-wide indicator, such as the weighted average DD or exposure-weighted volatility, can be monitored to assess the **overall resilience** of the counterparty network.
+
+This approach allows management to:
+
+- Detect correlations between counterparties’ DD movements during stress periods;  
+- Conduct scenario analyses under simulated market volatility increases;  
+- Evaluate the adequacy of capital buffers against aggregate exposure shocks.
+
+### 5.2.3 Internal Governance and Decision Framework
+
+To ensure the consistent use of model outputs, governance must define clear responsibilities between quantitative teams, credit officers, and senior management.  
+A typical governance structure may include:
+
+- **Model Oversight Committee:**  
+  Responsible for validating model assumptions (e.g., asset volatility estimation, default point calibration) and reviewing quarterly performance metrics.  
+
+- **Risk Control Unit:**  
+  Operates the monitoring dashboard, manages limit adjustments, and reports significant deviations to management.  
+
+- **Senior Credit Committee:**  
+  Makes final exposure decisions and approves policy changes triggered by model-based alerts.
+
+Such a governance framework ensures transparency in model usage and mitigates the risk of over-reliance on automated outputs.
+
+### 5.2.4 Feedback and Model Refinement
+
+Finally, effective internal risk management requires a continuous feedback loop between model performance and real-world outcomes.  
+Periodic back-testing of DD signals against realized counterparty behavior—such as rating downgrades, margin breaches, or credit spread widening—helps refine the calibration of parameters and improve predictive accuracy.  
+If the model consistently overestimates or underestimates risk for specific sectors, parameters such as asset volatility (\(\sigma_A\)) or the default point (DP) can be adjusted accordingly.
+
+This iterative process ensures that the KMV–GARCH framework remains aligned with evolving market structures and regulatory expectations.  
+By combining quantitative monitoring with institutional judgment, the internal management system not only strengthens credit discipline but also enhances the bank’s strategic resilience under volatile market conditions.
+
+
+
