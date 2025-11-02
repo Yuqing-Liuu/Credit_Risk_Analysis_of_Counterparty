@@ -1,6 +1,6 @@
 # Chapter 3 Measurement of Counterparty Credit Risk
 
-## 3.1 Basic Overview of Counterparty Credit Risk
+## 3.1 Overview of Counterparty Credit Risk
 
 Counterparty credit risk (CCR) refers to the potential loss a financial institution faces when a counterparty in a derivatives or securities-financing transaction defaults before the final settlement of cash flows. Unlike traditional loan credit risk, CCR depends on the market value of the underlying transaction, which can fluctuate over time and may even become negative.
 
@@ -59,12 +59,6 @@ $$
 In this framework, market-based credit-risk valuation tools are used to determine the relative weight of potential future exposure (PFE). As shown in Table 3.1, the add-on factors are determined according to the type of underlying transaction and the remaining maturity. The valuation incorporates the mark-to-market (MtM) principle, which allows institutions to assess net replacement costs and evaluate asset value fluctuations. This ensures that contractual asset valuations reflect both current exposure and the potential future volatility of market prices.
 
 #### Table 3.1. PFE Add-on Factors by Product Type and Maturity
-
-| Remaining Maturity | Interest Rate | Foreign Exchange and Gold | Equity | Precious Metals (excl. Gold) | Others |
-|--------------------|---------------|----------------------------|---------|------------------------------|---------|
-| Less than 1 year   | 0.0%          | 1.0%                       | 6.0%    | 7.0%                         | 10.0%   |
-| 1–5 years          | 0.5%          | 5.0%                       | 8.0%    | 7.0%                         | 12.0%   |
-| Over 5 years       | 1.5%          | 7.5%                       | 10.0%   | 8.0%                         | 15.0%   |
 
 Based on the transaction counterparties’ contractual exposure maturities, the CEA is computed as the sum of current and potential future exposures. The nominal value of a transaction is multiplied by the fixed add-on factor to estimate total exposure, which captures the maximum potential loss under extreme market conditions.  
 
