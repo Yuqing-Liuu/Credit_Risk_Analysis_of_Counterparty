@@ -4,7 +4,7 @@
 
 ## 4.1 Overview
 
-This chapter applies the GARCH–KMV framework to quantify counterparty credit risk (CCR) among major U.S. banking institutions over the 2018–2024 period. The methodology integrates market-derived equity volatility with balance sheet fundamentals to construct firm-specific measures of Distance to Default (DD) and Expected Default Frequency (EDF).
+We applies the GARCH–KMV framework to quantify counterparty credit risk (CCR) among major U.S. banking institutions over the 2018–2024 period. The methodology integrates market-derived equity volatility with balance sheet fundamentals to construct firm-specific measures of Distance to Default (DD) and Expected Default Frequency (EDF).
 
 The empirical investigation pursues three primary objectives. First, it operationalizes the KMV structural credit risk model while incorporating GARCH-based conditional volatility estimates to account for time-varying market risk dynamics. Second, it derives institutional default probabilities through the estimation of each bank's distance to the default threshold. Third, it examines the implications of these risk measures for regulatory capital requirements under the Basel III accords.
 
@@ -12,11 +12,11 @@ The empirical investigation pursues three primary objectives. First, it operatio
 
 ## 4.2 Data Description
 
-This section describes the dataset used in the empirical analysis, including the sample selection, data sources, variable definitions, and preprocessing procedures. The empirical study focuses on a representative sample of major U.S. banking institutions to ensure that the results reflect systemic characteristics of the banking sector rather than the idiosyncrasies of individual firms.
+The empirical analysis draws upon daily equity market data and quarterly balance sheet information for a sample of systemically important U.S. banking institutions observed between 2018 and 2024. The sample is intentionally restricted to major banks to ensure that the estimated risk metrics capture sector-wide dynamics rather than firm-specific idiosyncrasies that may not be representative of systemic counterparty credit risk.
 
 ### 4.2.1 Sample Selection
 
-The empirical analysis covers ten publicly listed U.S. banks: JPMorgan Chase (JPM), Bank of America (BAC), Citigroup (C), Capital One (COF), PNC Financial (PNC), Wells Fargo (WFC), M&T Bank (MTB), Fifth Third Bank (FITB), Truist Financial (TFC), and U.S. Bancorp (USB). These institutions are selected on the basis of market capitalization, data availability, and their importance within the interbank and derivatives markets. Together, they represent a significant portion of total U.S. banking assets and form an appropriate sample for studying counterparty credit risk under the Basel III framework.
+The analysis covers ten publicly listed U.S. banks: JPMorgan Chase (JPM), Bank of America (BAC), Citigroup (C), Capital One (COF), PNC Financial (PNC), Wells Fargo (WFC), M&T Bank (MTB), Fifth Third Bank (FITB), Truist Financial (TFC), and U.S. Bancorp (USB). These institutions are selected on the basis of market capitalization, data availability, and their importance within the interbank and derivatives markets. Together, they represent a significant portion of total U.S. banking assets and form an appropriate sample for studying counterparty credit risk under the Basel III framework.
 
 The observation period spans from January 2018 to December 2024. This period is chosen to include both normal and stressed financial conditions, most notably the COVID-19-induced market disruptions in 2020, followed by subsequent recovery phases. The seven-year horizon allows for a comprehensive examination of how solvency indicators evolve under different macroeconomic environments.
 
