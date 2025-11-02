@@ -132,13 +132,7 @@ The empirical and analytical findings of this study carry important implications
 
 ### 5.3.1 Market-Based Complement to Basel III Capital Framework
 
-Under the Basel III regime, banks are required to maintain a minimum level of Tier 1 capital to absorb unexpected losses and to apply standardized or internal model approaches to estimate counterparty exposures.  
-Traditional risk-weighted asset (RWA) calculations, however, rely heavily on static balance-sheet inputs and standardized risk weights that may not fully capture real-time market dynamics.  
-The GARCH–KMV model addresses this limitation by producing a **market-implied solvency measure** that evolves with changing asset volatility and leverage.
-
-The Distance to Default (DD) can be interpreted as a **market-based capital buffer**, representing the number of standard deviations by which a firm’s asset value exceeds its default point.  
-Supervisors can monitor the distribution of DD across banks to identify potential outliers whose solvency buffers narrow rapidly under stress.  
-In this sense, the GARCH–KMV model provides an early-warning complement to regulatory ratios such as the Common Equity Tier 1 (CET1) ratio.
+Under the Basel III framework, banks are mandated to maintain minimum Tier 1 capital levels to absorb unexpected losses and to employ either standardized or internal model-based approaches for estimating counterparty credit exposures. However, traditional risk-weighted asset (RWA) calculations predominantly rely on static balance-sheet data and predetermined risk weights that may inadequately reflect real-time market dynamics and emerging credit deterioration. The KMV–GARCH framework addresses this inherent limitation by generating a market-implied solvency indicator that responds dynamically to changes in both asset volatility and capital structure leverage.The Distance to Default (DD) metric can be conceptualized as a market-based capital buffer, quantifying the magnitude—measured in standard deviations—by which a firm's asset value exceeds its contractual default threshold. This interpretation enables supervisors to monitor the cross-sectional distribution of DD values across regulated institutions, facilitating the identification of potential outliers experiencing rapid erosion of their solvency margins under adverse market conditions. In this capacity, the KMV–GARCH model serves as a forward-looking complement to traditional regulatory capital ratios such as the Common Equity Tier 1 (CET1) ratio, which are inherently backward-looking and slow to capture deteriorating credit fundamentals.
 
 ### 5.3.2 Alignment with SA-CCR and Counterparty Exposure Measurement
 
