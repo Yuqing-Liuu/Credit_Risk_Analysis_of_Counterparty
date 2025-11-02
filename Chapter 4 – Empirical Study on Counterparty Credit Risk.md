@@ -32,7 +32,7 @@ $$
 
 where \( P_t \) denotes the adjusted closing price on day \( t \). These return series form the basis for volatility estimation through the GARCH(1,1) model.
 
-Second, firm-level balance-sheet variables are drawn from the Forbes Global 2000 dataset hosted on Kaggle. The main variables include total assets, total liabilities, and long-term debt. These are reported annually and used to construct the default barrier required by the KMV model. To ensure comparability across firms, all figures are converted into billions of U.S. dollars. When short-term debt data are missing, it is proxied as a fraction of total liabilities, following the approach of Gregory (2015):
+Second, firm-level balance-sheet variables are drawn from the Forbes Global 2000 dataset. The main variables include total assets, total liabilities, and long-term debt. These are reported annually and used to construct the default barrier required by the KMV model. To ensure comparability across firms, all figures are converted into billions of U.S. dollars. When short-term debt data are missing, it is proxied as a fraction of total liabilities, following the approach of Gregory (2015):
 
 $$
 \text{STD} \approx \max(\text{Total Liabilities} - \text{LTD}, 0) \times 0.2.
