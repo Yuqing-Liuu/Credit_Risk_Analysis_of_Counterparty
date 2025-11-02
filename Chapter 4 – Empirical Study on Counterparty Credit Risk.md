@@ -242,18 +242,7 @@ This section presents the empirical findings derived from the implementation of 
 
 The estimated distance to default values for the ten U.S. banks indicate a generally strong solvency position throughout the period 2018–2024. Table 4.1 summarizes the main results. All institutions exhibit substantial distances between their current asset values and default thresholds, reflecting a low likelihood of financial distress under normal market conditions.
 
-| Ticker | DD_last | sigmaE_annual_last |
-|:-------|---------:|-------------------:|
-| JPM | 159.48 | 0.2287 |
-| PNC | 152.90 | 0.2196 |
-| BAC | 143.97 | 0.2331 |
-| COF | 132.83 | 0.2690 |
-| C | 129.76 | 0.2484 |
-| WFC | 127.45 | 0.2710 |
-| FITB | 125.26 | 0.2751 |
-| USB | 119.25 | 0.2606 |
-| TFC | 118.29 | 0.2581 |
-| MTB | 110.12 | 0.2958 |
+<img width="1416" height="214" alt="1" src="https://github.com/user-attachments/assets/d2a835da-a39e-48d4-9dad-955d757738e1" />
 
 
 <img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" />
