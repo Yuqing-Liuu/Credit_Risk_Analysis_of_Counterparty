@@ -231,18 +231,6 @@ $$
 
 where \( \Phi(\cdot) \) denotes the cumulative distribution function of the standard normal distribution. For large, well-capitalized financial institutions, resulting in EDF values close to zero due to numerical precision limits. Consequently, the analysis primarily focuses on DD as the principal indicator of credit quality and solvency.
 
-### 4.4.6 Implementation Summary
-
-The empirical procedure can be summarized in the following steps:
-
-1. Collect daily stock price data and compute log returns for each firm.
-2. Estimate time-varying equity volatility using the GARCH(1,1) model.
-3. Construct the default point using available accounting data.
-4. Solve the KMV system to obtain asset value and asset volatility.
-5. Calculate daily DD and EDF for each institution.
-
-The resulting dataset contains a time series of DD and EDF values for each bank over the 2018–2024 period. These indicators are then used in Section 4.5 to analyze solvency dynamics and to assess the implications for counterparty credit risk under the Basel III capital framework.
-
 
 ---
 
@@ -266,6 +254,13 @@ The estimated distance to default values for the ten U.S. banks indicate a gener
 | USB | 119.25 | 0.2606 |
 | TFC | 118.29 | 0.2581 |
 | MTB | 110.12 | 0.2958 |
+
+
+<img width="805" height="455" alt="DD_Ranking" src="https://github.com/user-attachments/assets/bfa3d60f-9c33-4319-84eb-b83239063aa1" />
+
+<img width="539" height="416" alt="2" src="https://github.com/user-attachments/assets/d7ba79bf-c884-48a2-8322-94442227d098" />
+
+
 
 The results suggest that the largest and most diversified financial institutions, such as JPMorgan Chase, PNC Financial, and Bank of America, maintain the highest DD values. Their solvency buffers are wide, and their asset values lie far above the estimated default barrier. This is consistent with their substantial capital bases, diversified revenue streams, and strong liquidity positions. In contrast, regional and mid-sized institutions such as M&T Bank, Fifth Third Bank, and Truist Financial show lower DD values, reflecting narrower solvency margins and higher sensitivity to adverse market movements. 
 
