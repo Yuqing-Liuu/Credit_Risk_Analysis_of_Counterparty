@@ -167,15 +167,6 @@ Although the GARCH–KMV framework aligns well with regulatory objectives, sever
    While DD provides valuable supplementary insight, it should complement—not replace—existing RWA and EAD frameworks.  
    Effective integration would involve mapping DD to regulatory buffers such as the countercyclical capital buffer (CCyB) or the internal ratings-based (IRB) approach.
 
-### 5.3.5 Policy Perspective
-
-From a policy standpoint, the use of GARCH–KMV outputs in regulatory surveillance embodies the broader Basel III philosophy of **risk sensitivity and dynamic capital adjustment**.  
-By tracking real-time solvency movements, supervisors can anticipate periods of systemic fragility rather than reacting post-factum.  
-This aligns with the ongoing regulatory transition from static compliance reporting toward continuous, data-driven monitoring of financial stability.
-
-In summary, the integration of market-based models such as GARCH–KMV into the regulatory toolkit can enhance both **micro-prudential supervision**—by improving counterparty-level sensitivity—and **macro-prudential oversight**—by detecting system-wide vulnerabilities.  
-While the framework is not a substitute for formal regulatory capital calculation, it provides an empirically grounded complement that strengthens the resilience of the overall banking system.
-
 
 
 
