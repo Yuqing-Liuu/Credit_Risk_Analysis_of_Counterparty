@@ -1,28 +1,46 @@
 # Bibliography
 
-Basel Committee on Banking Supervision. International Convergence of Capital Measurement and Capital Standards: A Revised Framework (Comprehensive Version). Bank for International Settlements. Basel 2006.  
+Basel Committee on Banking Supervision. (2011). *Basel III: A global regulatory framework for more resilient banks and banking systems*. Bank for International Settlements (BIS).  
 
-Basel Committee on Banking Supervision. Basel III: A Global Regulatory Framework for More Resilient Banks and Banking Systems. Bank for International Settlements. Basel 2011.  
 
-Brigo D., Capponi A., Pallavicini A., Papatheodorou V. Bilateral counterparty risk valuation with stochastic dynamical models and application to Credit Default Swaps. London 2011.  
+Basel Committee on Banking Supervision. (2014). *The standardized approach for measuring counterparty credit risk exposures (SA-CCR)*. Bank for International Settlements (BIS).  
 
-Brigo D., Capponi A. Simplifying bilateral counterparty risk valuation under correlation between default and interest rates. Quantitative Finance. London 2010.  
 
-Brigo D., Masetti M. Risk-Neutral Pricing of Counterparty Risk. In: Pykhtin M. (ed.). Counterparty Credit Risk Modeling: Risk Management, Pricing and Regulation. Risk Books. London 2005.  
+Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. *Journal of Political Economy, 81*(3), 637–654.  
 
-Canabarro E., Picoult E., Wilde T. Counterparty risk and concentration risk in credit portfolios. Journal of Banking and Finance. New York 2003.  
 
-Dante G., Zhu S. Path-dependent options and counterparty credit exposure simulation. Risk Magazine. London 2005.  
+Brigo, D., & Capponi, A. (2010). Bilateral counterparty risk valuation with stochastic dynamical models and application to credit default swaps. *International Journal of Theoretical and Applied Finance, 13*(7), 1103–1149.  
 
-Duffie D. Counterparty Credit Risk Modelling. Journal of Banking and Finance. 2003.  
 
-Gibson M. Understanding the Risk of Counterparty Credit Exposure. Board of Governors of the Federal Reserve System. Washington 2005.  
+Crouhy, M., Galai, D., & Mark, R. (2000). A comparative analysis of current credit risk models. *Journal of Banking & Finance, 24*(1–2), 59–117.  
 
-Kamtchueng G. Credit valuation adjustment (CVA) and the post-Lehman counterparty risk management framework. London 2011.  
 
-Lu J., Juan M. Comparative study of Credit Valuation Adjustment (CVA) models for counterparty credit risk measurement. Journal of Financial Risk Management. 2011.  
+Duffie, D., & Singleton, K. (2003). *Credit Risk: Pricing, Measurement, and Management*. Princeton University Press.  
 
-Picoult E. Measuring Exposure at Default for Derivatives. Risk Magazine. London 2002.  
 
-Pykhtin M., Zhu S. A Guide to Counterparty Risk Modelling. Risk Magazine. London 2006.  
+Engle, R. F. (1982). Autoregressive conditional heteroskedasticity with estimates of the variance of United Kingdom inflation. *Econometrica, 50*(4), 987–1007.  
+
+
+Gibson, M. S. (2005). Measuring credit risk in the presence of collateral. *Finance and Economics Discussion Series 2005-64*, Board of Governors of the Federal Reserve System (U.S.).  
+
+
+Gregory, J. (2015). *Counterparty Credit Risk and Credit Valuation Adjustment: A Continuing Challenge for Global Financial Markets* (2nd ed.). Wiley Finance.  
+
+
+Hull, J. C. (2018). *Options, Futures, and Other Derivatives* (10th ed.). Pearson Education.  
+
+Jarrow, R., & Turnbull, S. (1995). Pricing derivatives on financial securities subject to credit risk. *Journal of Finance, 50*(1), 53–85.  
+
+
+Merton, R. C. (1974). On the pricing of corporate debt: The risk structure of interest rates. *Journal of Finance, 29*(2), 449–470.  
+
+
+Pykhtin, M., & Zhu, S. (2006). A guide to modeling counterparty credit risk. *GARP Risk Review, 28*(5), 16–22.  
+
+Saunders, A., & Allen, L. (2002). *Credit Risk Measurement: New Approaches to Value at Risk and Other Paradigms* (2nd ed.). Wiley-Finance.  
+
+Vasicek, O. (1984). Credit valuation. *KMV Corporation Working Paper*.  
+
+Zhang, D., Zhou, H., & Zhu, H. (2009). Explaining credit default swap spreads with the equity volatility and jump risks of individual firms. *Review of Financial Studies, 22*(12), 5099–5131.  
+
 
