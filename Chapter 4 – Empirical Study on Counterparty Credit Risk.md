@@ -65,7 +65,7 @@ All variables are aligned to a consistent time index based on trading days. For 
 Outliers in return data are winsorized at the 1st and 99th percentiles to mitigate the influence of extreme market movements on volatility estimates. The resulting dataset provides a clean and coherent panel structure for empirical analysis. All calculations are conducted in Python using standard statistical libraries, including pandas, numpy, and arch, ensuring reproducibility of results.
 
 
-The dataset thus combines both market-based and accounting-based information for a comprehensive assessment of counterparty credit risk. The integration of daily market prices, volatility dynamics, and balance-sheet fundamentals allows the GARCH–KMV model to reflect both short-term market fluctuations and long-term solvency characteristics. This foundation supports the subsequent estimation of Distance to Default (DD) and Expected Default Frequency (EDF), which serve as the core indicators of creditworthiness in the following analysis.
+The dataset thus combines both market-based and accounting-based information for a comprehensive assessment of counterparty credit risk. The integration of daily market prices, volatility dynamics, and balance-sheet fundamentals allows the GARCH–KMV model to reflect both short-term market fluctuations and long-term solvency characteristics. This foundation supports the subsequent estimation of Distance to Default (DD), which serve as the core indicators of creditworthiness in the following analysis.
 
 
 ---
