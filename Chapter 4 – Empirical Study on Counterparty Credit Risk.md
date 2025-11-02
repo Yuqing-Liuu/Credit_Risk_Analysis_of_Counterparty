@@ -6,13 +6,9 @@ This chapter presents the empirical analysis of counterparty credit risk among m
 
 In contemporary financial systems, counterparty credit risk (CCR) constitutes a central source of exposure for banks, particularly in derivatives and interbank markets. It arises when one institution faces the risk that its counterparty will default before the settlement of a financial transaction. Since the global financial crisis of 2008, international regulatory frameworks, especially Basel III, have placed greater emphasis on the identification, quantification, and control of CCR. Nevertheless, the quantitative measurement of CCR continues to rely on both structural and market-based approaches, with the KMV model remaining one of the most widely used frameworks (Merton 1974; Pykhtin and Zhu 2006; Gregory 2015).
 
-The KMV model, derived from the Merton (1974) structural theory of corporate default, treats a firm's equity as a call option on its assets. The probability of default depends on the position of the firm's asset value relative to a default barrier, expressed in standard deviation units as the Distance to Default (DD). The DD serves as a continuous measure of solvency: a higher DD implies greater financial strength and a lower likelihood of default. The Expected Default Frequency (EDF), computed as the probability that the asset value falls below the default barrier, translates DD into an explicit probability of default.
+The KMV model, derived from the Merton (1974) structural theory of corporate default, treats a firm's equity as a call option on its assets. The probability of default depends on the position of the firm's asset value relative to a default barrier, expressed in standard deviation units as the Distance to Default (DD). The DD serves as a continuous measure of solvency: a higher DD implies greater financial strength and a lower likelihood of default. The Expected Default Frequency (EDF), computed as the probability that the asset value falls below the default barrier, translates DD into an explicit probability of default.While the KMV model captures the structural foundations of default behavior, it assumes constant asset volatility. In reality, financial markets exhibit volatility clustering and time-varying variance, particularly during episodes of market turbulence. To address this limitation, the present study incorporates a Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model into the KMV framework (Engle 1982; Bollerslev 1986). The GARCH(1,1) specification models the conditional variance of returns as a function of past shocks and previous volatility, allowing the model to adapt dynamically to evolving market conditions.
 
-While the KMV model captures the structural foundations of default behavior, it assumes constant asset volatility. In reality, financial markets exhibit volatility clustering and time-varying variance, particularly during episodes of market turbulence. To address this limitation, the present study incorporates a Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model into the KMV framework (Engle 1982; Bollerslev 1986). The GARCH(1,1) specification models the conditional variance of returns as a function of past shocks and previous volatility, allowing the model to adapt dynamically to evolving market conditions.
-
-The integration of the GARCH and KMV frameworks produces a dynamic structural model that links firm fundamentals with market-derived risk factors. This approach enables the measurement of solvency for each institution at a given point in time and the analysis of how market shocks influence credit-risk dynamics. The empirical analysis focuses on ten major U.S. banks: JPMorgan Chase, Bank of America, Citigroup, Capital One, PNC Financial, Wells Fargo, M&T Bank, Fifth Third Bank, Truist Financial, and U.S. Bancorp. Together, these institutions represent a substantial share of the U.S. financial system and are central participants in interbank and derivative markets.
-
-The observation period from January 2018 to December 2024 encompasses both stable and turbulent market phases, including the COVID-19 crisis of 2020. This range allows for the examination of how solvency indicators such as DD and EDF respond to macroeconomic stress and subsequent recovery. The dataset combines daily market data (stock prices and volatilities) with balance-sheet variables (total assets, liabilities, and debt structure), forming a comprehensive basis for model calibration and estimation.
+The integration of the GARCH and KMV frameworks produces a dynamic structural model that links firm fundamentals with market-derived risk factors. This approach enables the measurement of solvency for each institution at a given point in time and the analysis of how market shocks influence credit-risk dynamics. The empirical analysis focuses on ten major U.S. banks: JPMorgan Chase, Bank of America, Citigroup, Capital One, PNC Financial, Wells Fargo, M&T Bank, Fifth Third Bank, Truist Financial, and U.S. Bancorp. Together, these institutions represent a substantial share of the U.S. financial system and are central participants in interbank and derivative markets.The observation period from January 2018 to December 2024 encompasses both stable and turbulent market phases. This range allows for the examination of how solvency indicators such as DD and EDF respond to macroeconomic stress and subsequent recovery. The dataset combines daily market data (stock prices and volatilities) with balance-sheet variables (total assets, liabilities, and debt structure), forming a comprehensive basis for model calibration and estimation.
 
 The empirical objectives of this chapter are twofold. First, it seeks to evaluate the solvency and default risk of the selected banks using market-based information. Second, it examines whether the results are consistent with the capital adequacy principles outlined in Basel III, which require banks to maintain sufficient buffers against counterparty default. By comparing model-implied solvency indicators with regulatory standards, the analysis provides insights into the effectiveness of the GARCH–KMV framework as a quantitative tool for assessing counterparty credit risk.
 
@@ -23,19 +19,61 @@ We applies the GARCH–KMV model to estimate the Distance to Default and Expecte
 
 ## 4.2 Data Description
 
-The empirical study focuses on **ten publicly listed U.S. banks**, representing a cross-section of large financial institutions that are systemically important and active in derivatives and interbank markets:
+This section describes the dataset used in the empirical analysis, including the sample selection, data sources, variable definitions, and preprocessing procedures. The empirical study focuses on a representative sample of major U.S. banking institutions to ensure that the results reflect systemic characteristics of the banking sector rather than the idiosyncrasies of individual firms.
 
-> **JPM**, **BAC**, **C**, **COF**, **PNC**, **WFC**, **FITB**, **MTB**, **TFC**, and **USB**.
+### 4.2.1 Sample Selection
 
-The observation window spans **January 2018 to December 2024**, covering both stable and volatile periods, including the COVID-19 pandemic shock in 2020. 
+The empirical analysis covers ten publicly listed U.S. banks: JPMorgan Chase (JPM), Bank of America (BAC), Citigroup (C), Capital One (COF), PNC Financial (PNC), Wells Fargo (WFC), M&T Bank (MTB), Fifth Third Bank (FITB), Truist Financial (TFC), and U.S. Bancorp (USB). These institutions are selected on the basis of market capitalization, data availability, and their importance within the interbank and derivatives markets. Together, they represent a significant portion of total U.S. banking assets and form an appropriate sample for studying counterparty credit risk under the Basel III framework.
 
-Data sources include:
+The observation period spans from January 2018 to December 2024. This period is chosen to include both normal and stressed financial conditions, most notably the COVID-19-induced market disruptions in 2020, followed by subsequent recovery phases. The seven-year horizon allows for a comprehensive examination of how solvency indicators evolve under different macroeconomic environments.
 
-- **Yahoo Finance API**: Daily closing prices, returns, and market capitalization.  
-- **Kaggle (Forbes Global 2000)**: Annual balance-sheet variables such as total assets, total liabilities, and long-term debt.  
-- **FRED (Federal Reserve Economic Data)**: U.S. Treasury yield as a proxy for the risk-free rate.  
+### 4.2.2 Data Sources
 
-All prices are adjusted for dividends and stock splits. Balance-sheet figures are aligned to fiscal-year reporting and converted to a consistent unit (USD billions). The data were cleaned to remove non-trading days and missing values.
+Three primary data sources are employed in this study. 
+
+First, daily stock price data are obtained from Yahoo Finance. These prices are adjusted for dividends and stock splits to produce a continuous time series of closing prices. From these, logarithmic daily returns are calculated as
+
+$$
+r_t = \ln\left(\frac{P_t}{P_{t-1}}\right),
+$$
+
+where \( P_t \) denotes the adjusted closing price on day \( t \). These return series form the basis for volatility estimation through the GARCH(1,1) model.
+
+Second, firm-level balance-sheet variables are drawn from the Forbes Global 2000 dataset hosted on Kaggle. The main variables include total assets, total liabilities, and long-term debt. These are reported annually and used to construct the default barrier required by the KMV model. To ensure comparability across firms, all figures are converted into billions of U.S. dollars. When short-term debt data are missing, it is proxied as a fraction of total liabilities, following the approach of Gregory (2015):
+
+$$
+\text{STD} \approx \max(\text{Total Liabilities} - \text{LTD}, 0) \times 0.2.
+$$
+
+Third, the risk-free interest rate is obtained from the Federal Reserve Economic Data (FRED) database. The one-year Treasury yield is used as a proxy for the continuous risk-free rate \( r \). This variable enters directly into the KMV formulation of both asset value dynamics and the default threshold discounting process.
+
+### 4.2.3 Variable Construction
+
+The study constructs several derived variables necessary for model calibration and estimation. Market capitalization is calculated as the product of share price and the number of shares outstanding, providing a direct measure of equity value \( E_t \). The volatility of equity returns, denoted by \( \sigma_E \), is estimated using the GARCH(1,1) model described in Section 4.3. The estimated conditional variance is annualized by multiplying by the square root of 252, corresponding to the number of trading days in a year:
+
+$$
+\sigma_E = \sqrt{252} \times \text{std}(\epsilon_t),
+$$
+
+where \( \epsilon_t \) denotes the residuals from the GARCH model. This measure captures the time-varying nature of market volatility.
+
+The default point \( D_P \) is computed using both short-term and long-term debt components as
+
+$$
+D_P = \text{STD} + 0.5 \times \text{LTD},
+$$
+
+in line with the methodology of Pykhtin and Zhu (2006) and Basel Committee (2011). This formulation reflects the practical assumption that short-term obligations are fully due upon default, while only part of the long-term debt contributes to the immediate default trigger. The ratio between equity value \( E_t \) and default point \( D_P \) serves as a preliminary indicator of leverage and financial stability.
+
+### 4.2.4 Data Preprocessing
+
+All variables are aligned to a consistent time index based on trading days. For financial statement items reported annually, linear interpolation is applied to approximate daily frequency, ensuring compatibility with high-frequency market data. Missing observations in daily price series are filled through forward interpolation, and firms with prolonged trading suspensions are excluded from the sample.
+
+Outliers in return data are winsorized at the 1st and 99th percentiles to mitigate the influence of extreme market movements on volatility estimates. The resulting dataset provides a clean and coherent panel structure for empirical analysis. All calculations are conducted in Python using standard statistical libraries, including pandas, numpy, and arch, ensuring reproducibility of results.
+
+
+The dataset thus combines both market-based and accounting-based information for a comprehensive assessment of counterparty credit risk. The integration of daily market prices, volatility dynamics, and balance-sheet fundamentals allows the GARCH–KMV model to reflect both short-term market fluctuations and long-term solvency characteristics. This foundation supports the subsequent estimation of Distance to Default (DD) and Expected Default Frequency (EDF), which serve as the core indicators of creditworthiness in the following analysis.
+
 
 ---
 
