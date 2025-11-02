@@ -79,68 +79,86 @@ The dataset thus combines both market-based and accounting-based information for
 
 ## 4.3 Model Specification
 
-### 4.3.1 KMV Structural Model
+This section presents the theoretical foundation of the empirical model used to quantify counterparty credit risk. The model integrates the structural credit-risk framework proposed by Merton (1974) with a GARCH(1,1) volatility process to account for time-varying risk dynamics. The combined structure enables the simultaneous analysis of firm-level solvency and market-driven volatility.
 
-The KMV model builds on the **Merton (1974)** structural approach, which treats equity as a European call option on the firm’s assets with a strike price equal to its debt obligations. The value of a firm’s equity \(E\) is expressed as:
+### 4.3.1 The KMV Structural Model
 
-$$
-E = V_A N(d_1) - D_P e^{-rT} N(d_2)
-$$
-
-where:
+The structural model of credit risk originates from Merton (1974), who models a firm’s equity as a European call option written on its total asset value. Under this framework, the firm is considered to default when the value of its assets falls below a critical threshold, known as the default point. The firm’s asset value \( V_A \) is assumed to follow a geometric Brownian motion of the form
 
 $$
-d_1 = \frac{\ln(V_A / D_P) + (r + 0.5\sigma_A^2)T}{\sigma_A\sqrt{T}}, 
-\quad d_2 = d_1 - \sigma_A\sqrt{T}
+dV_A = \mu_A V_A \, dt + \sigma_A V_A \, dW_t,
 $$
 
-and:
+where \( \mu_A \) denotes the expected rate of return on assets, \( \sigma_A \) represents the volatility of asset returns, and \( dW_t \) is a standard Wiener process. At maturity \( T \), the firm’s debt obligation is denoted by \( D_P \), representing the total value of debt due. Default occurs when \( V_A(T) < D_P \).
 
-- \(V_A\): market value of firm assets  
-- \(D_P\): default point  
-- \(r\): risk-free rate  
-- \(\sigma_A\): asset volatility  
-- \(T\): time horizon (one year)  
-- \(N(\cdot)\): cumulative standard normal distribution function.
-
-The **Distance to Default (DD)** is defined as the number of standard deviations by which the firm’s asset value exceeds the default point:
+Within this structure, the market value of equity \( E \) is given by the Black–Scholes option pricing formula:
 
 $$
-DD = \frac{\ln(V_A/D_P) + (r - 0.5\sigma_A^2)T}{\sigma_A\sqrt{T}}
+E = V_A N(d_1) - D_P e^{-rT} N(d_2),
 $$
 
-and the **Expected Default Frequency (EDF)** is given by:
+where
 
 $$
-EDF = \Phi(-DD)
+d_1 = \frac{\ln(V_A / D_P) + (r + 0.5 \sigma_A^2) T}{\sigma_A \sqrt{T}}, 
+\quad d_2 = d_1 - \sigma_A \sqrt{T}.
 $$
 
-where \(\Phi(\cdot)\) is the cumulative normal CDF.  
-A higher DD implies stronger solvency and lower default probability, whereas a smaller DD indicates elevated credit risk *(Pykhtin and Zhu 2006; Hull 2018)*.
-
----
-
-### 4.3.2 GARCH(1,1) Volatility Process
-
-To incorporate time-varying volatility, equity returns \(r_t\) are modeled using a **GARCH(1,1)** process:
+Here, \( r \) represents the risk-free interest rate, \( N(\cdot) \) is the cumulative standard normal distribution, and \( T \) is the time horizon. Equity volatility \( \sigma_E \) is linked to asset volatility \( \sigma_A \) through the partial derivative of equity value with respect to asset value:
 
 $$
-r_t = \mu + \epsilon_t, \qquad \epsilon_t = \sigma_t z_t, \quad z_t \sim N(0,1)
+\sigma_E = \frac{V_A N(d_1)}{E} \, \sigma_A.
+$$
+
+The model can be inverted numerically to solve for \( V_A \) and \( \sigma_A \) given observed market equity \( E \), its volatility \( \sigma_E \), and debt value \( D_P \). This inversion allows the estimation of the unobservable asset-side variables required for default analysis.
+
+The probability of default is represented by the Expected Default Frequency (EDF), which is obtained as the probability that the firm’s asset value will fall below its default point within horizon \( T \):
+
+$$
+EDF = \Phi(-DD),
+$$
+
+where the Distance to Default (DD) is defined as
+
+$$
+DD = \frac{\ln(V_A / D_P) + (r - 0.5 \sigma_A^2) T}{\sigma_A \sqrt{T}}.
+$$
+
+The DD therefore measures the number of standard deviations by which the current asset value exceeds the default point. A larger DD implies greater solvency, whereas a smaller DD indicates higher credit risk. According to empirical literature, DD provides a more stable and interpretable measure of credit quality than EDF, particularly for large financial institutions with low observed default frequencies (Pykhtin and Zhu 2006; Hull 2018).
+
+### 4.3.2 The GARCH(1,1) Volatility Process
+
+A key limitation of the traditional KMV model lies in its assumption of constant asset volatility. Empirical evidence shows that financial markets exhibit volatility clustering and persistence, especially during times of crisis. To address this, the present study employs the Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model introduced by Engle (1982) and extended by Bollerslev (1986). The GARCH(1,1) process defines the conditional variance of returns as follows:
+
+$$
+r_t = \mu + \epsilon_t, \qquad \epsilon_t = \sigma_t z_t, \quad z_t \sim N(0,1),
 $$
 
 $$
-\sigma_t^2 = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2
+\sigma_t^2 = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2,
 $$
 
-where \( \sigma_t^2 \) represents conditional variance, and parameters \( \omega, \alpha, \beta \) are estimated via maximum likelihood.  
-This specification captures **volatility clustering**—a stylized fact in financial markets *(Engle 1982; Bollerslev 1986)*.  
-The annualized volatility used in the KMV stage is:
+where \( \omega > 0 \), \( \alpha, \beta \geq 0 \), and \( \alpha + \beta < 1 \). The parameters \( \alpha \) and \( \beta \) capture the persistence of volatility shocks. The model implies that large innovations in returns (high \( \epsilon_t^2 \)) increase future volatility, while previous volatility (\( \sigma_{t-1}^2 \)) decays gradually over time.
+
+The conditional variance \( \sigma_t^2 \) provides a time-varying measure of market uncertainty. Annualized equity volatility \( \sigma_E \) is computed from the GARCH process as
 
 $$
-\sigma_E = \sqrt{252} \times \text{std}(\epsilon_t)
+\sigma_E = \sqrt{252} \times \text{std}(\epsilon_t),
 $$
 
-This ensures consistency between the GARCH-derived volatility and the KMV model’s one-year time horizon.
+reflecting the annualized standard deviation of daily residuals. This dynamic volatility estimate replaces the constant volatility assumption of the standard KMV model, ensuring that the resulting DD and EDF reflect current market conditions.
+
+### 4.3.3 Integration of GARCH and KMV Models
+
+The integration of the GARCH and KMV frameworks allows the model to incorporate both firm fundamentals and market-driven dynamics. In this combined structure, the GARCH model captures short-term fluctuations in equity volatility, while the KMV model translates this information into credit-risk metrics such as DD and EDF. The iterative estimation proceeds as follows:
+
+1. Estimate daily equity volatility \( \sigma_E \) from the GARCH(1,1) model.  
+2. Use market capitalization \( E_t \), equity volatility \( \sigma_E \), risk-free rate \( r_t \), and the default point \( D_P \) to solve the KMV system for \( V_A \) and \( \sigma_A \).  
+3. Compute DD and EDF using the standard KMV formulations.  
+
+This approach produces a sequence of daily DD and EDF estimates that capture both firm-specific risk and systemic market volatility. The dynamic nature of this model makes it suitable for analyzing time-varying solvency and for stress-testing purposes in counterparty credit-risk management. Moreover, it enables an empirical comparison of market-implied solvency measures with regulatory capital standards such as those defined under Basel III (Basel Committee 2011).
+
+The model specification unifies structural and econometric methodologies. The KMV model provides the theoretical foundation linking firm assets and liabilities, while the GARCH process supplies the dynamic component necessary to reflect evolving market volatility. Together, they form a coherent analytical framework for the empirical measurement of counterparty credit risk.
 
 ---
 
