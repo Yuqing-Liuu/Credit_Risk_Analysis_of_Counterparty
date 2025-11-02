@@ -58,8 +58,6 @@ $$
 
 In this framework, market-based credit-risk valuation tools are used to determine the relative weight of potential future exposure (PFE). As shown in Table 3.1, the add-on factors are determined according to the type of underlying transaction and the remaining maturity. The valuation incorporates the mark-to-market (MtM) principle, which allows institutions to assess net replacement costs and evaluate asset value fluctuations. This ensures that contractual asset valuations reflect both current exposure and the potential future volatility of market prices.
 
-#### Table 3.1. PFE Add-on Factors by Product Type and Maturity
-
 Based on the transaction counterparties’ contractual exposure maturities, the CEA is computed as the sum of current and potential future exposures. The nominal value of a transaction is multiplied by the fixed add-on factor to estimate total exposure, which captures the maximum potential loss under extreme market conditions.  
 
 The model also applies a standardized weighting approach for PFE, integrating adjustments between add-on and nominal exposure values. This ensures that the exposure calculation reflects the net replacement cost ratio across product types and maturities. Consequently, the weighting of PFE is determined through data calibration and validated by sensitivity and risk-hedging measures.  
@@ -120,7 +118,7 @@ Within an unknown future time horizon, the SM defines the potential loss upon co
 
 This provides a consistent and conservative classification of exposure types, ensuring that counterparty credit-risk measurement aligns with Basel III capital requirements while maintaining comparability across institutions.
 
-## 3.3 Measurement of Central Counterparty (CCP) Credit Risk
+## 3.3 Measurement of Counterparty Credit Risk
 
 Since April 2013, the Basel Committee on Banking Supervision (BCBS) has officially released a series of evaluation reports on counterparty credit risk (CCR). These reports focus on the exposure arising from central counterparties (CCPs), aiming to identify market risks associated with central clearing and to enhance the measurement framework for counterparty credit exposure in over-the-counter (OTC) derivatives markets.  
 
