@@ -16,7 +16,7 @@
   - 3.2 Measurement Models (CEM, IMM, SM, NIMM)  
   - 3.3 Central Counterparty Credit Risk  
 
-- **Chapter 4 Empirical Study**
+- **Chapter 4 Empirical Analysis of Counterparty Credit Risk**
   - 4.1 Variable Selection  
   - 4.2 Model Parameters  
   - 4.3 Empirical Results  
