@@ -21,7 +21,6 @@
   - 4.2 Data Description
   - 4.3 Model Specification  
   - 4.4 Empirical Implementation
-  - 4.4 Empirical Implementation
   - 4.5 Empirical Results and Discussion
 
 
