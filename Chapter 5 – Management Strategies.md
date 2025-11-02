@@ -153,19 +153,20 @@ By embedding market-based solvency measures into macroprudential surveillance fr
 
 ### 5.3.4 Implementation and Challenges
 
-Although the GARCH–KMV framework aligns well with regulatory objectives, several challenges must be acknowledged before large-scale adoption:
+While the KMV–GARCH framework demonstrates strong alignment with regulatory risk measurement objectives, several implementation challenges must be addressed before widespread supervisory adoption:
 
-1. **Data and Model Transparency:**  
-   Regulators require transparent inputs and validation procedures.  
-   The KMV approach depends on market prices and estimated parameters that may vary across institutions, necessitating standardized disclosure formats.
+1. Data Quality and Model Transparency
+Regulatory application requires transparent data inputs and reproducible validation methodologies. The KMV framework relies on market equity prices and estimated parameters (particularly asset volatility and default thresholds) that may exhibit considerable variation across institutions due to differences in calibration techniques, data sources, and modeling assumptions. To ensure consistency and comparability, supervisors would need to mandate standardized disclosure protocols specifying: (i) the precise estimation methodology for unobservable parameters; (ii) the frequency of model recalibration; and (iii) sensitivity analyses demonstrating robustness to key assumptions.
+2. Model Risk and Parameter Uncertainty
+The estimation of asset volatility (σ_A) and calibration of the default point introduce material sources of model risk and parameter sensitivity. Small changes in volatility estimates or leverage assumptions can produce significant variation in DD values, potentially leading to inconsistent regulatory treatment across comparable counterparties. Supervisors must therefore establish rigorous validation requirements, including: mandatory backtesting against historical default events, out-of-sample performance evaluation during stress episodes, and benchmarking of parameter estimates against industry standards or supervisory reference values.
+3. Integration with Existing Regulatory Frameworks
+DD-based metrics should be positioned as a complementary supervisory tool rather than a substitute for established RWA and EAD calculation frameworks. Effective regulatory integration would involve developing explicit linkages between DD metrics and existing prudential instruments, such as:
 
-2. **Model Risk and Parameter Sensitivity:**  
-   Asset volatility (\(\sigma_A\)) and default-point calibration introduce estimation uncertainty.  
-   Supervisors must ensure that internal banks’ implementations are back-tested against realized credit events or market stress outcomes.
+Mapping DD percentile thresholds to adjustments in the countercyclical capital buffer (CCyB);
+Incorporating DD trajectories as supervisory inputs for the Internal Ratings-Based (IRB) approach, particularly for probability of default (PD) validation;
+Using portfolio-level DD indicators to inform Pillar 2 capital add-ons under the Supervisory Review and Evaluation Process (SREP).
 
-3. **Regulatory Integration:**  
-   While DD provides valuable supplementary insight, it should complement—not replace—existing RWA and EAD frameworks.  
-   Effective integration would involve mapping DD to regulatory buffers such as the countercyclical capital buffer (CCyB) or the internal ratings-based (IRB) approach.
+Such integration would preserve the established regulatory architecture while enhancing its market sensitivity and forward-looking capability.
 
 
 
