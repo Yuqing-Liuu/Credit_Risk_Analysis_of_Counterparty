@@ -47,7 +47,7 @@ Such systematic integration ensures that market-implied risk signals are operati
 
 ### 5.1.4 Advantages and Practical Implications
 
-The main strength of the GARCH–KMV assessment framework lies in its **forward-looking nature**.  
+The main strength of the GARCH–KMV assessment framework lies in its forward-looking nature.  
 It provides early signals of credit deterioration before rating agencies or financial statements reflect the change.  
 Moreover, it aligns well with regulatory principles under Basel III, where capital adequacy and exposure limits are increasingly linked to internal risk sensitivity.
 
@@ -61,13 +61,13 @@ In essence, the risk assessment system transforms CCR measurement from a static 
 
 ## 5.2 Internal Risk Management
 
-While the quantitative assessment system outlined in Section 5.1 provides a foundation for identifying and classifying counterparty credit risk (CCR), effective management also depends on how institutions **interpret, integrate, and act upon** these signals.  
+While the quantitative assessment system outlined in Section 5.1 provides a foundation for identifying and classifying counterparty credit risk (CCR), effective management also depends on how institutions interpret, integrate, and act upon these signals.  
 Internal risk management mechanisms transform statistical outputs—such as Distance to Default (DD) and volatility measures—into actionable strategies that directly influence capital allocation, exposure limits, and credit decisions.
 
 ### 5.2.1 Integration of Model Outputs into Credit Processes
 
 The first step in internal management is to embed model-derived indicators within the bank’s existing credit workflow.  
-The daily monitoring of DD and equity volatility can serve as a **quantitative complement** to traditional qualitative credit reviews.  
+The daily monitoring of DD and equity volatility can serve as a quantitative complement to traditional qualitative credit reviews.  
 Specifically, institutions may incorporate the following practices:
 
 - **Credit Review Enhancement:**  
@@ -86,7 +86,7 @@ Specifically, institutions may incorporate the following practices:
 
 Individual counterparty risk must be aggregated at the portfolio level to evaluate systemic vulnerabilities.  
 By aggregating DD and volatility measures across all counterparties, the institution can identify concentrations of exposure to specific sectors or markets.  
-A portfolio-wide indicator, such as the weighted average DD or exposure-weighted volatility, can be monitored to assess the **overall resilience** of the counterparty network.
+A portfolio-wide indicator, such as the weighted average DD or exposure-weighted volatility, can be monitored to assess the overall resilience of the counterparty network.
 
 This approach allows management to:
 
@@ -118,6 +118,9 @@ If the model consistently overestimates or underestimates risk for specific sect
 
 This iterative process ensures that the KMV–GARCH framework remains aligned with evolving market structures and regulatory expectations.  
 By combining quantitative monitoring with institutional judgment, the internal management system not only strengthens credit discipline but also enhances the bank’s strategic resilience under volatile market conditions.
+
+
+
 
 
 
