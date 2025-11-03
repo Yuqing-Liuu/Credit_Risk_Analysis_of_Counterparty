@@ -31,7 +31,7 @@ Hull, J. C. (2018). *Options, Futures, and Other Derivatives* (10th ed.).
 Jarrow, R., & Turnbull, S. (1995). Pricing derivatives on financial securities subject to credit risk. 
 
 
-Merton, R. C. (1974). On the pricing of corporate debt: The risk structure of interest rates. 
+Merton, R. C. (1974). On the pricing of corporate debt: The risk structure of interest rates
 
 
 Pykhtin, M., & Zhu, S. (2006). A guide to modeling counterparty credit risk. 
