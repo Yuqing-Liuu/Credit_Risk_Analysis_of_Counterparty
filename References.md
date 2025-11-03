@@ -26,20 +26,20 @@ Gibson, M. S. (2005). Measuring credit risk in the presence of collateral. *Fina
 Gregory, J. (2015). *Counterparty Credit Risk and Credit Valuation Adjustment: A Continuing Challenge for Global Financial Markets* (2nd ed.). Wiley Finance.  
 
 
-Hull, J. C. (2018). *Options, Futures, and Other Derivatives* (10th ed.). Pearson Education.  
+Hull, J. C. (2018). *Options, Futures, and Other Derivatives* (10th ed.).  
 
-Jarrow, R., & Turnbull, S. (1995). Pricing derivatives on financial securities subject to credit risk. *Journal of Finance, 50*(1), 53–85.  
-
-
-Merton, R. C. (1974). On the pricing of corporate debt: The risk structure of interest rates. *Journal of Finance, 29*(2), 449–470.  
+Jarrow, R., & Turnbull, S. (1995). Pricing derivatives on financial securities subject to credit risk. 
 
 
-Pykhtin, M., & Zhu, S. (2006). A guide to modeling counterparty credit risk. *GARP Risk Review, 28*(5), 16–22.  
+Merton, R. C. (1974). On the pricing of corporate debt: The risk structure of interest rates. 
 
-Saunders, A., & Allen, L. (2002). *Credit Risk Measurement: New Approaches to Value at Risk and Other Paradigms* (2nd ed.). Wiley-Finance.  
+
+Pykhtin, M., & Zhu, S. (2006). A guide to modeling counterparty credit risk. 
+
+Saunders, A., & Allen, L. (2002). *Credit Risk Measurement: New Approaches to Value at Risk and Other Paradigms* (2nd ed.). 
 
 Vasicek, O. (1984). Credit valuation. *KMV Corporation Working Paper*.  
 
-Zhang, D., Zhou, H., & Zhu, H. (2009). Explaining credit default swap spreads with the equity volatility and jump risks of individual firms. *Review of Financial Studies, 22*(12), 5099–5131.  
+Zhang, D., Zhou, H., & Zhu, H. (2009). Explaining credit default swap spreads with the equity volatility and jump risks of individual firms.
 
 
