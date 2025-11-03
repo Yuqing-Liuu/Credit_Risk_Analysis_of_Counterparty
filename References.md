@@ -38,7 +38,7 @@ Pykhtin, M., & Zhu, S. (2006). A guide to modeling counterparty credit risk.
 
 Saunders, A., & Allen, L. (2002). *Credit Risk Measurement: New Approaches to Value at Risk and Other Paradigms* (2nd ed.). 
 
-Vasicek, O. (1984). Credit valuation. *KMV Corporation Working Paper*.  
+Vasicek, O. (1984). Credit valuation. KMV Corporation.
 
 Zhang, D., Zhou, H., & Zhu, H. (2009). Explaining credit default swap spreads with the equity volatility and jump risks of individual firms.
 
