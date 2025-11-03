@@ -6,16 +6,15 @@ Basel Committee on Banking Supervision. (2011). *Basel III: A global regulatory 
 Basel Committee on Banking Supervision. (2014). *The standardized approach for measuring counterparty credit risk exposures (SA-CCR)*. Bank for International Settlements (BIS).  
 
 
-Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. *Journal of Political Economy, 81*(3), 637–654.  
+Black, F., & Scholes, M. (1973). The pricing of options and corporate liabilities. 
+
+Brigo, D., & Capponi, A. (2010). Bilateral counterparty risk valuation with stochastic dynamical models and application to credit default swaps. 
 
 
-Brigo, D., & Capponi, A. (2010). Bilateral counterparty risk valuation with stochastic dynamical models and application to credit default swaps. *International Journal of Theoretical and Applied Finance, 13*(7), 1103–1149.  
+Crouhy, M., Galai, D., & Mark, R. (2000). A comparative analysis of current credit risk models. 
 
 
-Crouhy, M., Galai, D., & Mark, R. (2000). A comparative analysis of current credit risk models. *Journal of Banking & Finance, 24*(1–2), 59–117.  
-
-
-Duffie, D., & Singleton, K. (2003). *Credit Risk: Pricing, Measurement, and Management*. Princeton University Press.  
+Duffie, D., & Singleton, K. (2003). *Credit Risk: Pricing, Measurement, and Management*. 
 
 
 Engle, R. F. (1982). Autoregressive conditional heteroskedasticity with estimates of the variance of United Kingdom inflation. *Econometrica, 50*(4), 987–1007.  
